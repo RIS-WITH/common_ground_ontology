@@ -1,0 +1,302 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
+     xmlns:cg_capabilities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+    </owl:Ontology>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+        <!-- cg_agents#hasFieldOfView
+
+    <owl:ObjectProperty rdf:about="cg_agents#hasFieldOfView">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
+        <rdfs:range rdf:resource="cg_agents#FieldOfView"/>
+    </owl:ObjectProperty> -->
+
+
+     
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- cg_agents#fovHasValue -->
+
+    <!-- <owl:DatatypeProperty rdf:about="cg_agents#fovHasValue">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#qualityHasValue"/>
+        <rdfs:domain rdf:resource="cg_agents#FieldOfView"/>
+    </owl:DatatypeProperty> -->
+
+
+     <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <!-- cg_capabilities#Capability -->
+
+    <owl:Class rdf:about="cg_capabilities#Capability">
+        <!-- <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
+        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Capability</rdfs:label>
+        <rdfs:label xml:lang="fr">capacite</rdfs:label> -->
+    </owl:Class>
+
+    <!-- Communication capabilities -->
+
+    <owl:Class rdf:about="cg_capabilities#Communication">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+        <!-- <owl:disjointWith rdf:resource="cg_capabilities#Perception"/>
+        <owl:disjointWith rdf:resource="cg_capabilities#Navigation"/>
+        <owl:disjointWith rdf:resource="cg_capabilities#ObjectManipulation"/> -->
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Motion">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Gesture">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#FacialExpression">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Pointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#BodyPointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#ArmPointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#FingerPointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#ArmPointing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HeadPointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#GazePointing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HeadPointing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Tactile">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Verbal">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Listening">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Verbal"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Speaking">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Verbal"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#VisualDisplaying">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#DisplayingColor">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#DisplayingText">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#DisplayingImage">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+    </owl:Class>
+
+
+    <!-- Navigation capabilities -->
+
+    <owl:Class rdf:about="cg_capabilities#Navigation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#MoveTo">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Navigation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#WalkTo">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#RollTo">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#FlyTo">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#SwimTo">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+    </owl:Class>
+
+
+
+    <!-- ObjectManipulation capabilities -->
+
+    <owl:Class rdf:about="cg_capabilities#ObjectManipulation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#MoveObject">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectManipulation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#MoveObjectContactOnly">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveObject"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#MoveObjectViaGrasping">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveObjectContactOnly"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#ToolUse">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectManipulation"/>
+    </owl:Class>
+
+    <!-- Perception capabilities -->
+
+    <owl:Class rdf:about="cg_capabilities#Perception">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Propriception">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Hearing">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanVoiceDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Hearing"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanVoiceIdentification">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanVoiceDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanVoiceLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanVoiceDetection"/>
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#Sight">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Sight"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#BodyJointsDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#BodyJointsLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HandDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HandGestureRecognition">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HandDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HandLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HandDetection"/>
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#LegDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#LegLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#LegDetection"/>
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanFaceDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanFaceLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanExpressionRecognition">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanGazeDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanIdentification">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#HumanLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#ObjectDetection">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#Sight"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#ObjectLocalisation">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectDetection"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cg_capabilities#ObjectRecognition">
+        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectDetection"/>
+    </owl:Class>
+
+
+
+</rdf:RDF>

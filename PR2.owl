@@ -1,0 +1,247 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pr2="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2">
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBaseLinkName -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBaseLinkName"/>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBodyPart -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBodyPart"/>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasEndLinkName -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasEndLinkName"/>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#isLinkedTo -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#isLinkedTo"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Arm -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Arm">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Arm"/>
+    </owl:Class>
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Torso -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Torso">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Torso"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Base -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Base">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#WheeledBase"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Gripper -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Gripper">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Gripper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Head -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Head">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#pr2 -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#pr2">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Robot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Arm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Base"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Gripper"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Head"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Torso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Robot_0 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Robot_0">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#pr2"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Base"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">base_footprint</cg_agents:hasBaseLinkName>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Head"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftArm"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftGripper"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightArm"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightGripper"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Base -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Base">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Base"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">base_link</cg_agents:hasBaseLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso"/>
+    </owl:NamedIndividual>
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Torso"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">base_below_link</cg_agents:hasBaseLinkName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Head -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Head">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Head"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head_pan_link</cg_agents:hasBaseLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Arm"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l_shoulder_pan_link</cg_agents:hasBaseLinkName>
+        <cg_agents:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l_wrist_roll_link</cg_agents:hasEndLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftGripper -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftGripper">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Gripper"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l_gripper_palm_link</cg_agents:hasBaseLinkName>
+        <cg_agents:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l_gripper_tool_frame</cg_agents:hasEndLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0LeftArm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Arm"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_shoulder_pan_link</cg_agents:hasBaseLinkName>
+        <cg_agents:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_wrist_roll_link</cg_agents:hasEndLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0Torso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightGripper -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightGripper">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2Gripper"/>
+        <cg_agents:hasBaseLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_gripper_palm_link</cg_agents:hasBaseLinkName>
+        <cg_agents:hasEndLinkName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r_gripper_tool_frame</cg_agents:hasEndLinkName>
+        <cg_agents:isLinkedTo rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2#PR2_0RightArm"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

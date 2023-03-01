@@ -1,15 +1,50 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#"
-     xmlns:ris_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#"
-     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#"
+     xmlns:ris_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents">
-      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PR2"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/TIAGO"/>
     </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasCapability -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasCapability">
+        <rdfs:domain rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Agent"/>
+        <rdfs:range rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
+    </rdf:Description>
     
 
 
@@ -21,140 +56,22 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
     
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Individuals
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
     
 
 
-    <!-- ris_agents#kinect2_fov -->
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#CameraTop_optical_frame -->
 
-    <owl:NamedIndividual rdf:about="ris_agents#kinect2_fov">
-        <rdf:type rdf:resource="cg_agents#FieldOfView"/>
-        <cg_agents:fovHasClipNear rdf:datatype="http://www.w3.org/2002/07/owl#real">0.1</cg_agents:fovHasClipNear>
-        <cg_agents:fovHasClipFar rdf:datatype="http://www.w3.org/2002/07/owl#real">6</cg_agents:fovHasClipFar>
-        <cg_agents:fovHasHeight rdf:datatype="http://www.w3.org/2002/07/owl#real">54.8</cg_agents:fovHasHeight>
-        <cg_agents:fovHasWidth rdf:datatype="http://www.w3.org/2002/07/owl#real">84.1</cg_agents:fovHasWidth>
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#CameraTop_optical_frame">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
     </owl:NamedIndividual>
     
 
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#head_mount_kinect2_rgb_optical_frame -->
 
-    <!-- ris_agents#realsense_fov -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#realsense_fov">
-        <rdf:type rdf:resource="cg_agents#FieldOfView"/>
-        <cg_agents:fovHasClipNear rdf:datatype="http://www.w3.org/2002/07/owl#real">0.1</cg_agents:fovHasClipNear>
-        <cg_agents:fovHasClipFar rdf:datatype="http://www.w3.org/2002/07/owl#real">6</cg_agents:fovHasClipFar>
-        <cg_agents:fovHasHeight rdf:datatype="http://www.w3.org/2002/07/owl#real">34.8</cg_agents:fovHasHeight>
-        <cg_agents:fovHasWidth rdf:datatype="http://www.w3.org/2002/07/owl#real">64.1</cg_agents:fovHasWidth>
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#head_mount_kinect2_rgb_optical_frame">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
     </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#human_fov -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#human_fov">
-        <rdf:type rdf:resource="cg_agents#FieldOfView"/>
-        <cg_agents:fovHasClipNear rdf:datatype="http://www.w3.org/2002/07/owl#real">0.1</cg_agents:fovHasClipNear>
-        <cg_agents:fovHasClipFar rdf:datatype="http://www.w3.org/2002/07/owl#real">12</cg_agents:fovHasClipFar>
-        <cg_agents:fovHasHeight rdf:datatype="http://www.w3.org/2002/07/owl#real">70</cg_agents:fovHasHeight>
-        <cg_agents:fovHasWidth rdf:datatype="http://www.w3.org/2002/07/owl#real">102.4</cg_agents:fovHasWidth>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#base_footprint -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#base_footprint">
-        <rdf:type rdf:resource="cg_agents#Base"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#head_mount_kinect2_rgb_optical_frame -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#head_mount_kinect2_rgb_optical_frame">
-        <rdf:type rdf:resource="cg_agents#Head"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#left_gripper_frame -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#l_gripper_tool_frame">
-        <rdf:type rdf:resource="cg_agents#Hand"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#r_gripper_tool_frame -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#r_gripper_tool_frame">
-        <rdf:type rdf:resource="cg_agents#Hand"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#pr2 -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#pr2">
-        <rdf:type rdf:resource="cg_agents#Robot"/>
-        <cg_agents:hasBase rdf:resource="ris_agents#base_footprint"/>
-        <cg_agents:hasHead rdf:resource="ris_agents#head_mount_kinect2_rgb_optical_frame"/>
-        <cg_agents:hasRightHand rdf:resource="ris_agents#r_gripper_tool_frame"/>
-        <cg_agents:hasLeftHand rdf:resource="ris_agents#l_gripper_tool_frame"/>
-        <cg_agents:hasFieldOfView rdf:resource="ris_agents#kinect2_fov"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#base_link -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#base_link">
-        <rdf:type rdf:resource="cg_agents#Base"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#CameraTop_optical_frame -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#CameraTop_optical_frame">
-        <rdf:type rdf:resource="cg_agents#Head"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#l_gripper -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#l_gripper">
-        <rdf:type rdf:resource="cg_agents#Hand"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#r_gripper -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#r_gripper">
-        <rdf:type rdf:resource="cg_agents#Hand"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- ris_agents#pepper -->
-
-    <owl:NamedIndividual rdf:about="ris_agents#pepper">
-        <rdf:type rdf:resource="cg_agents#Robot"/>
-        <cg_agents:hasBase rdf:resource="ris_agents#base_link"/>
-        <cg_agents:hasHead rdf:resource="ris_agents#CameraTop_optical_frame"/>
-        <cg_agents:hasRightHand rdf:resource="ris_agents#r_gripper"/>
-        <cg_agents:hasLeftHand rdf:resource="ris_agents#l_gripper"/>
-        <cg_agents:hasFieldOfView rdf:resource="ris_agents#realsense_fov"/>
-    </owl:NamedIndividual>
-
 </rdf:RDF>
+
+
+

@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:PEPPER="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#"
+     xmlns:CG_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER">
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBodyPart -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasBodyPart"/>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasComponent -->
+
+    <owl:AnnotationProperty rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasComponent"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Robot"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Component"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Arm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#WheeledBase"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHand -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHand">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Hand"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Torso"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperLeftArm"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperLeftHand"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperRightArm"/>
+        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperRightHand"/>
+        <cg_agents:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#RealSenseD435i"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_Base -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_Base">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_Head -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_Head">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_LeftArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_LeftArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_LeftHand -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_LeftHand">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_RightArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_RightArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_RightHand -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0_RightHand">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHand"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

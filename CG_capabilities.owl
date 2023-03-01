@@ -1,55 +1,22 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
-     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
-     xmlns:cg_capabilities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#"
-     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
-     xmlns:onto="ontologenius"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:onto="ontologenius"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:CG_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#"
+     xmlns:cg_capabilities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities">
-      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
     </owl:Ontology>
-
+    
 
 
     <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-        <!-- cg_agents#hasFieldOfView
-
-    <owl:ObjectProperty rdf:about="cg_agents#hasFieldOfView">
-        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
-        <rdfs:domain rdf:resource="cg_agents#Agent"/>
-        <rdfs:range rdf:resource="cg_agents#FieldOfView"/>
-    </owl:ObjectProperty> -->
-
-
-     
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <!-- cg_agents#fovHasValue -->
-
-    <!-- <owl:DatatypeProperty rdf:about="cg_agents#fovHasValue">
-        <rdfs:subPropertyOf rdf:resource="cg_entities#qualityHasValue"/>
-        <rdfs:domain rdf:resource="cg_agents#FieldOfView"/>
-    </owl:DatatypeProperty> -->
-
-
-     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -57,246 +24,445 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- cg_capabilities#Capability -->
+    
 
-    <owl:Class rdf:about="cg_capabilities#Capability">
-        <!-- <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
-        <rdfs:label xml:lang="en">Capability</rdfs:label>
-        <rdfs:label xml:lang="fr">capacite</rdfs:label> -->
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+    
 
-    <!-- Communication capabilities -->
 
-    <owl:Class rdf:about="cg_capabilities#Communication">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
-        <!-- <owl:disjointWith rdf:resource="cg_capabilities#Perception"/>
-        <owl:disjointWith rdf:resource="cg_capabilities#Navigation"/>
-        <owl:disjointWith rdf:resource="cg_capabilities#ObjectManipulation"/> -->
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Motion">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Gesture">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyPointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyPointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#FacialExpression">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Pointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Motion"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingColor -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingColor">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#BodyPointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingImage -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingImage">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#ArmPointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingText -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#DisplayingText">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#FingerPointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#ArmPointing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FacialExpression -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FacialExpression">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HeadPointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Pointing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FingerPointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FingerPointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#GazePointing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HeadPointing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FlyTo -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FlyTo">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Tactile">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GazePointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GazePointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Verbal">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GestureCommunicationCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GestureCommunicationCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Listening">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Verbal"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Speaking">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Verbal"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandGestureRecognition -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandGestureRecognition">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#VisualDisplaying">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Communication"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HandDetection"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#DisplayingColor">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#DisplayingText">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#DisplayingImage">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#VisualDisplaying"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Sight"/>
     </owl:Class>
+    
 
 
-    <!-- Navigation capabilities -->
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanExpressionRecognition -->
 
-    <owl:Class rdf:about="cg_capabilities#Navigation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanExpressionRecognition">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#MoveTo">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Navigation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#WalkTo">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#RollTo">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanGazeDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanGazeDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#FlyTo">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanIdentification -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanIdentification">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#SwimTo">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveTo"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection"/>
     </owl:Class>
+    
 
 
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceDetection -->
 
-    <!-- ObjectManipulation capabilities -->
-
-    <owl:Class rdf:about="cg_capabilities#ObjectManipulation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#MoveObject">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectManipulation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceIdentification -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceIdentification">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#MoveObjectContactOnly">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveObject"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanVoiceDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#MoveObjectViaGrasping">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#MoveObjectContactOnly"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#ToolUse">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectManipulation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection"/>
     </owl:Class>
+    
 
-    <!-- Perception capabilities -->
 
-    <owl:Class rdf:about="cg_capabilities#Perception">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Capability"/>
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Listening -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Listening">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Propriception">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Hearing">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObject -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObject">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectManipulationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanVoiceDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Hearing"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObject"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanVoiceIdentification">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanVoiceDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectViaGrasping -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectViaGrasping">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanVoiceLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanVoiceDetection"/>
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#NavigationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#Sight">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Perception"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#NavigationCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#NavigationCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Sight"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Sight"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#BodyJointsDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#BodyJointsLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectManipulationCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectManipulationCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HandDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectRecognition -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectRecognition">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HandGestureRecognition">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HandDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HandLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HandDetection"/>
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#LegDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#BodyJointsDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Propriception -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Propriception">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#LegLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#LegDetection"/>
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#RollTo -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#RollTo">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanFaceDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Sight -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Sight">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanFaceLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanLocalisation"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Speaking -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Speaking">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanExpressionRecognition">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#SwimTo -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#SwimTo">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanGazeDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Tactile -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Tactile">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanIdentification">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanFaceDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ToolUse -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ToolUse">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectManipulationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#HumanLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#HumanDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#ObjectDetection">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#Sight"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability"/>
     </owl:Class>
+    
 
-    <owl:Class rdf:about="cg_capabilities#ObjectLocalisation">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectDetection"/>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#WalkTo -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#WalkTo">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
-
-    <owl:Class rdf:about="cg_capabilities#ObjectRecognition">
-        <rdfs:subClassOf rdf:resource="cg_capabilities#ObjectDetection"/>
-    </owl:Class>
-
-
-
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

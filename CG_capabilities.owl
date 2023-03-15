@@ -383,9 +383,9 @@
     
 
 
-    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Propriception -->
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Proprioception -->
 
-    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Propriception">
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Proprioception">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
     

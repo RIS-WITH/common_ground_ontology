@@ -36,17 +36,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasCapability -->
-
-    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#hasCapability">
-        <rdfs:domain rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Agent"/>
-        <rdfs:range rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
-    </rdf:Description>
-    
-
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -61,16 +50,17 @@
 
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#CameraTop_optical_frame -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#CameraTop_optical_frame">
+    <!-- <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#CameraTop_optical_frame">
         <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
-    </owl:NamedIndividual>
+    </owl:NamedIndividual> -->
     
 
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#head_mount_kinect2_rgb_optical_frame -->
 
-    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#head_mount_kinect2_rgb_optical_frame">
+    <!-- <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_agents#head_mount_kinect2_rgb_optical_frame">
         <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Head"/>
-    </owl:NamedIndividual>
+    </owl:NamedIndividual> -->
+
 </rdf:RDF>
 
 

@@ -7,6 +7,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:PEPPER="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#"
+     xmlns:CG_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
      xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#"
      xmlns:CG_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#">
@@ -50,44 +51,6 @@
     
 
 
-    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper -->
-
-    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper">
-        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Robot"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasBodyPart"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Component"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
-    
-
-
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm -->
 
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperArm">
@@ -120,6 +83,14 @@
     
 
 
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTactileComponent -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTactileComponent">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#TactileComponent"/>
+    </owl:Class>
+    
+
+
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso -->
 
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTorso">
@@ -130,7 +101,9 @@
 
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper -->
 
-    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper"/>
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Robot"/>
+    </owl:Class>
     
 
 
@@ -145,17 +118,18 @@
     
 
 
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTactile_0 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTactile_0">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperTactileComponent"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0 -->
 
     <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#Pepper_0">
         <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#pepper"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperBase"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperHead"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperLeftArm"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperLeftHand"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperRightArm"/>
-        <cg_agents:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/PEPPER#PepperRightHand"/>
-        <cg_agents:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#RealSenseD435i"/>
     </owl:NamedIndividual>
     
 

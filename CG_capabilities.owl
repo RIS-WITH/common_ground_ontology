@@ -7,11 +7,12 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:onto="ontologenius"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:CG_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
-     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xmlns:cg_capabilities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_capabilities">
         <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components"/>
     </owl:Ontology>
     
 
@@ -32,6 +33,22 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Arm"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -57,6 +74,22 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyPointing">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyPointing -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyPointing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Base"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -104,6 +137,25 @@
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability"/>
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#VisualDisplaying"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FacialExpression -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FacialExpression">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ExpressiveFace"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ScreenComponent"/>
+                    </owl:Restriction>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -112,6 +164,22 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FingerPointing">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ArmPointing"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FingerPointing -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#FingerPointing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Hand"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -136,6 +204,25 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GestureCommunicationCapability">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MotionCommunicationCapability"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GestureCommunicationCapability -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#GestureCommunicationCapability">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#BodyPart"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ManipulationMotionPlanningComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -169,6 +256,22 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Pointing"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HeadPointing">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Head"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -177,6 +280,25 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Hearing">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#MicrophoneComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#SpeechToTextComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </rdf:Description>
     
 
 
@@ -185,6 +307,18 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Sight"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanDetection">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#MotionCaptureSystem"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </owl:Class>
+    
     
 
 
@@ -193,6 +327,25 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanExpressionRecognition">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanExpressionRecognition -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanExpressionRecognition">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraRGBComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#HumanFaceExpressionRecognitionAlgorithm"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -210,6 +363,29 @@
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceDetection"/>
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanLocalisation"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceLocalisation -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#HumanFaceLocalisation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraRGBComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#HumanFaceRecognitionAlgorithm"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#PixelToWorldComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -267,6 +443,25 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#BodyJointsDetection"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LegDetection">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#HumanLegDetectionAlgo"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#LidarComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -284,6 +479,26 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Listening">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal"/>
     </owl:Class>
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Listening -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Listening">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#MicrophoneComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#SpeechToTextComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -308,6 +523,29 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObject"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ManipulationMotionPlanningComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ObjectTrackerSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -316,6 +554,33 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectViaGrasping">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectContactOnly"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectViaGrasping -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveObjectViaGrasping">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Gripper"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ManipulationMotionPlanningComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ObjectTrackerSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -333,7 +598,43 @@
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Capability"/>
     </owl:Class>
     
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#LocaliseCapability -->
 
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LocaliseCapability">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#LidarLocalisationComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Map"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#LidarComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#VisualSLAMComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#NavigationCapability"/>
+    </owl:Class>
 
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection -->
 
@@ -348,6 +649,27 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectDetection"/>
     </owl:Class>
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectLocalisation">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#CameraComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ObjectTrackerSystem"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+    
     
 
 
@@ -388,6 +710,17 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Proprioception">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Proprioception -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Proprioception">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ProprioceptionComponent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -396,6 +729,26 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#RollTo">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#RollTo -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#RollTo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#LocaliseCapability"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#NavigationMotionPlanningComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#WheeledBase"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -412,6 +765,25 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Speaking">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Speaking -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Speaking">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#SpeakerComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#TextToSpeechComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -428,6 +800,17 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Tactile">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#CommunicationCapability"/>
     </owl:Class>
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Tactile -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Tactile">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#TactileComponent"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+    </rdf:Description>
     
 
 
@@ -437,6 +820,16 @@
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ObjectManipulationCapability"/>
     </owl:Class>
     
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ToolUse -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#ToolUse">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#dependsOnComponent"/>
+                <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#EndEffector"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
 
 
     <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#Verbal -->
@@ -460,6 +853,37 @@
     <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#WalkTo">
         <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#MoveToCapability"/>
     </owl:Class>
+
+        <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#WalkTo -->
+
+    <rdf:Description rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#WalkTo">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#LeggedBase"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#LocalisationComponent"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#hasAvailableComponent"/>
+                        <owl:someValuesFrom rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#NavigationMotionPlanningComponent"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </rdf:Description>
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PressureSensing -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PressureSensing">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_capabilities#PerceptionCapability"/>
+    </owl:Class>
+
 </rdf:RDF>
 
 

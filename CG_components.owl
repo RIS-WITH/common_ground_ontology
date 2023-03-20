@@ -1,0 +1,546 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:onto="ontologenius"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cg_components="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components">
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+    </owl:Ontology>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- cg_components#Component -->
+
+    <owl:Class rdf:about="cg_components#Component">
+        <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
+    </owl:Class>
+
+     <!-- cg_components#Arm -->
+
+    <owl:Class rdf:about="cg_components#Arm">
+        <rdfs:subClassOf rdf:resource="cg_components#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#Base -->
+
+    <owl:Class rdf:about="cg_components#Base">
+        <rdfs:subClassOf rdf:resource="cg_components#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#BodyPart -->
+
+    <owl:Class rdf:about="cg_components#BodyPart">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#CameraComponent -->
+
+    <owl:Class rdf:about="cg_components#CameraComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#SensorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#CameraDepthComponent -->
+
+    <owl:Class rdf:about="cg_components#CameraDepthComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CameraComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#CameraRGBComponent -->
+
+    <owl:Class rdf:about="cg_components#CameraRGBComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CameraComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#CognitiveComponent -->
+
+    <owl:Class rdf:about="cg_components#CognitiveComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#CommunicationComponent -->
+
+    <owl:Class rdf:about="cg_components#CommunicationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CognitiveComponent"/>
+    </owl:Class>
+
+    <!-- cg_components#ActuatorComponent -->
+
+    <owl:Class rdf:about="cg_components#ActuatorComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#EndEffector -->
+
+    <owl:Class rdf:about="cg_components#EndEffector">
+        <rdfs:subClassOf rdf:resource="cg_components#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ExpressiveFace -->
+
+    <owl:Class rdf:about="cg_components#ExpressiveFace">
+        <rdfs:subClassOf rdf:resource="cg_components#Head"/>
+    </owl:Class>
+    
+
+    <!-- cg_components#Gripper -->
+
+    <owl:Class rdf:about="cg_components#Gripper">
+        <rdfs:subClassOf rdf:resource="cg_components#EndEffector"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#Hand -->
+
+    <owl:Class rdf:about="cg_components#Hand">
+        <rdfs:subClassOf rdf:resource="cg_components#EndEffector"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HandDetectionAlgorithm -->
+
+    <owl:Class rdf:about="cg_components#HandDetectionAlgorithm">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#Head -->
+
+    <owl:Class rdf:about="cg_components#Head">
+        <rdfs:subClassOf rdf:resource="cg_components#BodyPart"/>
+    </owl:Class>
+
+
+     <!-- cg_components#HumanDetectionAlgoDepth -->
+
+    <owl:Class rdf:about="cg_components#HumanDetectionAlgoDepth">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanDetectionAlgoRGB -->
+
+    <owl:Class rdf:about="cg_components#HumanDetectionAlgoRGB">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanDetectionAlgorithm -->
+
+    <owl:Class rdf:about="cg_components#HumanDetectionAlgorithm">
+        <rdfs:subClassOf rdf:resource="cg_components#PerceptionComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanFaceExpressionRecognitionAlgorithm -->
+
+    <owl:Class rdf:about="cg_components#HumanFaceExpressionRecognitionAlgorithm">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanFaceRecognitionAlgorithm -->
+
+    <owl:Class rdf:about="cg_components#HumanFaceRecognitionAlgorithm">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanLegDetectionAlgo -->
+
+    <owl:Class rdf:about="cg_components#HumanLegDetectionAlgo">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#HumanVoiceLocalisationAlgorithm -->
+
+    <owl:Class rdf:about="cg_components#HumanVoiceLocalisationAlgorithm">
+        <rdfs:subClassOf rdf:resource="cg_components#HumanDetectionAlgorithm"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#LeggedBase -->
+
+    <owl:Class rdf:about="cg_components#LeggedBase">
+        <rdfs:subClassOf rdf:resource="cg_components#Base"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#LidarComponent -->
+
+    <owl:Class rdf:about="cg_components#LidarComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#SensorComponent"/>
+    </owl:Class>
+
+    <!-- cg_components#LidarLocalisationComponent -->
+
+    <owl:Class rdf:about="cg_components#LidarLocalisationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#LocalisationComponent"/>
+    </owl:Class>
+    
+    
+
+
+    <!-- cg_components#LocalisationComponent -->
+
+    <owl:Class rdf:about="cg_components#LocalisationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#NavigationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ManipulationMotionPlanningComponent -->
+
+    <owl:Class rdf:about="cg_components#ManipulationMotionPlanningComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#ObjectManipulationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#MicrophoneComponent -->
+
+    <owl:Class rdf:about="cg_components#MicrophoneComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#SensorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#MotionCaptureSystem -->
+
+    <owl:Class rdf:about="cg_components#MotionCaptureSystem">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#NavigationComponent -->
+
+    <owl:Class rdf:about="cg_components#NavigationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CognitiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#NavigationMotionPlanningComponent -->
+
+    <owl:Class rdf:about="cg_components#NavigationMotionPlanningComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#NavigationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ObjectLocalisationComponent -->
+
+    <owl:Class rdf:about="cg_components#ObjectLocalisationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#ObjectManipulationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ObjectManipulationComponent -->
+
+    <owl:Class rdf:about="cg_components#ObjectManipulationComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CognitiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ObjectTrackerSystem -->
+
+    <owl:Class rdf:about="cg_components#ObjectTrackerSystem">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#PerceptionComponent -->
+
+    <owl:Class rdf:about="cg_components#PerceptionComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CognitiveComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#PixelToWorldComponent -->
+
+    <owl:Class rdf:about="cg_components#PixelToWorldComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#PerceptionComponent"/>
+    </owl:Class>
+
+
+    <!-- cg_components#PressureSensorComponent -->
+
+    <owl:Class rdf:about="cg_components#PressureSensorComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#SensorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#ProprioceptionComponent -->
+
+    <owl:Class rdf:about="cg_components#ProprioceptionComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#PerceptionComponent"/>
+    </owl:Class>
+
+
+     <!-- cg_components#ScreenComponent -->
+
+    <owl:Class rdf:about="cg_components#ScreenComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CommunicationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#SensorComponent -->
+
+    <owl:Class rdf:about="cg_components#SensorComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#SpeakerComponent -->
+
+    <owl:Class rdf:about="cg_components#SpeakerComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#ActuatorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#SpeechToTextComponent -->
+
+    <owl:Class rdf:about="cg_components#SpeechToTextComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CommunicationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#TactileComponent -->
+
+    <owl:Class rdf:about="cg_components#TactileComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#SensorComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#TextToSpeechComponent -->
+
+    <owl:Class rdf:about="cg_components#TextToSpeechComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#CommunicationComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#Torso -->
+
+    <owl:Class rdf:about="cg_components#Torso">
+        <rdfs:subClassOf rdf:resource="cg_components#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#WheeledBase -->
+
+    <owl:Class rdf:about="cg_components#WheeledBase">
+        <rdfs:subClassOf rdf:resource="cg_components#Base"/>
+    </owl:Class>
+
+
+    <!-- cg_components#Map -->
+
+    <owl:Class rdf:about="cg_components#Map">
+        <rdfs:subClassOf rdf:resource="cg_components#Component"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_components#VisualSLAMComponent -->
+
+    <owl:Class rdf:about="cg_components#VisualSLAMComponent">
+        <rdfs:subClassOf rdf:resource="cg_components#LocalisationComponent"/>
+    </owl:Class>
+
+     <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- cg_components#AMCL -->
+
+    <owl:NamedIndividual rdf:about="cg_components#AMCL">
+        <rdf:type rdf:resource="cg_components#LidarLocalisationComponent"/>
+        <!-- <cg_components:isComponentOf rdf:resource="PEPPER#Pepper_0"/>
+        <cg_components:isComponentOf rdf:resource="PR2#PR2_0"/> -->
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#ArTrackAlvar -->
+
+    <owl:NamedIndividual rdf:about="cg_components#ArTrackAlvar">
+        <rdf:type rdf:resource="cg_components#ObjectTrackerSystem"/>
+        <!-- <cg_components:isComponentOf rdf:resource="PEPPER#Pepper_0"/>
+        <cg_components:isComponentOf rdf:resource="PR2#PR2_0"/> -->
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#HarkSoundLocalization -->
+
+    <owl:NamedIndividual rdf:about="cg_components#HarkSoundLocalization">
+        <rdf:type rdf:resource="cg_components#HumanVoiceLocalisationAlgorithm"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#KinectV2 -->
+
+    <owl:NamedIndividual rdf:about="cg_components#KinectV2">
+        <rdf:type rdf:resource="cg_components#CameraDepthComponent"/>
+        <rdf:type rdf:resource="cg_components#CameraRGBComponent"/>
+        <!-- <cg_components:isComponentOf rdf:resource="PR2#PR2_0_Head"/> -->
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#MocapOptitrack -->
+
+    <owl:NamedIndividual rdf:about="cg_components#MocapOptitrack">
+        <rdf:type rdf:resource="cg_components#MotionCaptureSystem"/>
+        <!-- <cg_components:isComponentOf rdf:resource="PEPPER#Pepper_0"/> -->
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#RealSenseD435i -->
+
+    <owl:NamedIndividual rdf:about="cg_components#RealSenseD435i">
+        <rdf:type rdf:resource="cg_components#CameraDepthComponent"/>
+        <rdf:type rdf:resource="cg_components#CameraRGBComponent"/>
+        <!-- <cg_components:isLinkedTo rdf:resource="PEPPER#Pepper_0_Head"/> -->
+    </owl:NamedIndividual>
+
+     <!-- cg_agents#EnvironmentMap -->
+
+    <owl:NamedIndividual rdf:about="cg_agents#EnvironmentMap">
+        <rdf:type rdf:resource="cg_components#Map"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_agents#GoogleSpeechToText -->
+
+    <owl:NamedIndividual rdf:about="cg_components#GoogleSpeechToText">
+        <rdf:type rdf:resource="cg_components#SpeechToTextComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#Move_Base -->
+
+    <owl:NamedIndividual rdf:about="cg_components#Move_Base">
+        <rdf:type rdf:resource="cg_components#NavigationMotionPlanningComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#Move_It -->
+
+    <owl:NamedIndividual rdf:about="cg_components#Move_It">
+        <rdf:type rdf:resource="cg_components#ManipulationMotionPlanningComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#TFNode -->
+
+    <owl:NamedIndividual rdf:about="cg_components#TFNode">
+        <rdf:type rdf:resource="cg_components#ProprioceptionComponent"/>
+    </owl:NamedIndividual>
+
+    <!-- cg_components#Hokuyo_UTM-30LX -->
+
+    <owl:NamedIndividual rdf:about="cg_components#Hokuyo_UTM-30LX">
+        <rdf:type rdf:resource="cg_components#LidarComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- cg_components#Hokuyo_UTM-30LX_Tilt -->
+
+    <owl:NamedIndividual rdf:about="cg_components#Hokuyo_UTM-30LX_Tilt">
+        <rdf:type rdf:resource="cg_components#LidarComponent"/>
+    </owl:NamedIndividual>
+     
+
+
+
+
+</rdf:RDF>

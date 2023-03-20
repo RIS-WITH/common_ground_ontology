@@ -1,0 +1,248 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pepper="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
+     xmlns:cg_agents1="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#"
+     xmlns:CG_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_entities#"
+     xmlns:cg_components="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper">
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+        <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_components"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#Pepper -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#Pepper">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_agents#Robot"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperArm -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperArm">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Arm"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperBase -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperBase">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#WheeledBase"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHand -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHand">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Hand"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHead -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHead">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Head"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTactileComponent -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTactileComponent">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#TactileComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTorso -->
+
+    <owl:Class rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTorso">
+        <rdfs:subClassOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#Torso"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperSpeakers -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Speakers">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#SpeakerComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTactile_0 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Tactile">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTactileComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0 -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#Pepper"/>
+        <cg_agents1:hasCapability rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_capa"/>
+        <cg_agents1:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Base"/>
+        <cg_agents1:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Head"/>
+        <cg_agents1:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftArm"/>
+        <cg_agents1:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightArm"/>
+        <cg_agents1:hasBodyPart rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Torso"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#ArTrackAlvar"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Base -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Base">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperBase"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Head -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Head">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHead"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Tactile"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#RealSenseD435i"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Microphone"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Speakers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperArm"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHand -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHand">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHand"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHandTactileSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHandTactileSensor -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_LeftHandTactileSensor">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#TactileComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Microphone -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Microphone">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#MicrophoneComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightArm -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightArm">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperArm"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHand"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHand -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHand">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperHand"/>
+        <cg_agents1:hasComponent rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHandTactileSensor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHandTactileSensor -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_RightHandTactileSensor">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#TactileComponent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Torso -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_Torso">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#PepperTorso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_VisualSLAM -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0_VisualSLAM">
+        <rdf:type rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/cg_components#VisualSLAMComponent"/>
+        <cg_agents1:isComponentOf rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_capa -->
+
+    <owl:NamedIndividual rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/pepper#pepper_capa"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

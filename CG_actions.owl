@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_actions"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_actions#"
+     xmlns:cg_actions="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_actions#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:dul="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_actions">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- cg_actions#hasParticipant -->
+
+    <owl:ObjectProperty rdf:about="cg_actions#hasParticipant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="dul#Event"/>
+        <rdfs:range rdf:resource="cg_entities#Entity"/>
+    </owl:ObjectProperty>
+
+    
+
+
+    <!-- cg_actions#isParticipantIn -->
+
+    <owl:ObjectProperty rdf:about="cg_actions#isParticipantIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="cg_actions#hasParticipant"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:range rdf:resource="dul#Event"/>
+    </owl:ObjectProperty>
+
+    
+
+
+    <!-- cg_actions#involvesAgent -->
+
+    <owl:ObjectProperty rdf:about="cg_actions#involvesAgent">
+        <rdfs:subPropertyOf rdf:resource="cg_actions#hasParticipant"/>
+        <rdfs:domain rdf:resource="dul#Event"/>
+        <rdfs:range rdf:resource="cg_agents#Agent"/>
+    </owl:ObjectProperty>
+
+    
+
+
+    <!-- cg_actions#isAgentInvolvedIn -->
+
+    <owl:ObjectProperty rdf:about="cg_actions#isAgentInvolvedIn">
+        <rdfs:subPropertyOf rdf:resource="cg_actions#isParticipantIn"/>
+        <owl:inverseOf rdf:resource="cg_actions#involvesAgent"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
+        <rdfs:range rdf:resource="dul#Event"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- cg_actions#Action -->
+
+    <owl:Class rdf:about="cg_actions#Action">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualEntity"/>
+        <rdfs:subClassOf rdf:resource="dul#Event"/>
+        <rdfs:label xml:lang="fr">action</rdfs:label>
+        <rdfs:label xml:lang="en">action</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#CommunicationAction -->
+
+    <owl:Class rdf:about="cg_actions#CommunicationAction">
+        <rdfs:subClassOf rdf:resource="cg_actions#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#MentalAction -->
+
+    <owl:Class rdf:about="cg_actions#MentalAction">
+        <rdfs:subClassOf rdf:resource="cg_actions#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#PhysicalAction -->
+
+    <owl:Class rdf:about="cg_actions#PhysicalAction">
+        <rdfs:subClassOf rdf:resource="cg_actions#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#Task -->
+
+    <owl:Class rdf:about="cg_actions#Task">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualEntity"/>
+        <rdfs:subClassOf rdf:resource="dul#Event"/>
+        <rdfs:label xml:lang="fr">tache</rdfs:label>
+        <rdfs:label xml:lang="en">task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#CommunicationTask -->
+
+    <owl:Class rdf:about="cg_actions#CommunicationTask">
+        <rdfs:subClassOf rdf:resource="cg_actions#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#MentalTask -->
+
+    <owl:Class rdf:about="cg_actions#MentalTask">
+        <rdfs:subClassOf rdf:resource="cg_actions#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_actions#PhysicalTask -->
+
+    <owl:Class rdf:about="cg_actions#PhysicalTask">
+        <rdfs:subClassOf rdf:resource="cg_actions#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_actions#Task"/>
+            <rdf:Description rdf:about="cg_actions#ACtion"/>
+        </owl:members>
+    </rdf:Description>
+
+</rdf:RDF>

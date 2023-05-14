@@ -152,4 +152,34 @@
         <rdfs:domain rdf:resource="cg_objects#Object"/>
         <rdfs:range rdf:resource="cg_agents#Agent"/>
     </owl:ObjectProperty>
+
+
+
+    <!-- gc_env_int#hasHandMovingToward -->
+
+    <owl:ObjectProperty rdf:about="gc_env_int#hasHandMovingToward">
+        <rdfs:subPropertyOf rdf:resource="cg_geometric#geometricalProperty"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
+        <rdfs:range rdf:resource="cg_objects#Pickable"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- gc_env_int#hasLeftHandMovingToward -->
+
+    <owl:ObjectProperty rdf:about="gc_env_int#hasLeftHandMovingToward">
+        <rdfs:subPropertyOf rdf:resource="gc_env_int#hasHandMovingToward"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
+        <rdfs:range rdf:resource="cg_objects#Pickable"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- gc_env_int#hasRightHandMovingToward -->
+
+    <owl:ObjectProperty rdf:about="gc_env_int#hasRightHandMovingToward">
+        <rdfs:subPropertyOf rdf:resource="gc_env_int#hasHandMovingToward"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
+        <rdfs:range rdf:resource="cg_objects#Pickable"/>
+    </owl:ObjectProperty>
 </rdf:RDF>

@@ -11,6 +11,8 @@
      xmlns:cg_geometric="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_geometric#"
      xmlns:cg_env_int="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_env_interaction#"
      xmlns:cg_building="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_building#"
+     xmlns:cg_verbs="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -27,6 +29,8 @@
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_context"/>
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_env_interaction"/>
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_building"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
     </owl:Ontology>
     
 
@@ -134,7 +138,7 @@
 
     <owl:Class rdf:about="common_ground#Border">
         <rdfs:subClassOf rdf:resource="common_ground#GraphicalEntity"/>
-        <!--rdfs:subClassOf rdf:resource="common_ground#FrFemaleGender"/-->
+        <!--rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/-->
         <rdfs:label xml:lang="fr">bordure</rdfs:label>
         <rdfs:label xml:lang="en">border</rdfs:label>
         <onto:label xml:lang="fr">contour</onto:label>

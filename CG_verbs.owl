@@ -1,0 +1,1723 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs#"
+     xmlns:cg_verbs="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_verbs">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+    </owl:Ontology>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- cg_verbs#LanguageVerb -->
+
+    <owl:Class rdf:about="cg_verbs#LanguageVerb">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ActionVerb -->
+
+    <owl:Class rdf:about="cg_verbs#ActionVerb">
+        <rdfs:subClassOf rdf:resource="cg_verbs#LanguageVerb"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Conjugation
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Conjugation -->
+
+    <owl:Class rdf:about="cg_verbs#Conjugation">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#SimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#SimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#Conjugation"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#SimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#SimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#Conjugation"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#Conjugation"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Pack
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Pack -->
+
+    <owl:Class rdf:about="cg_verbs#Pack">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pack"/>
+        <rdfs:label xml:lang="en">pack</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">mets</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">mets</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">met</rdfs:label>
+        <rdfs:label xml:lang="en">packs</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mettons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mettez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PackTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mettent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pack"/>
+        <rdfs:label xml:lang="en">packed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PackTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pack"/>
+        <rdfs:label xml:lang="en">had packed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez mis</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PackTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PackTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PackPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient mis</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Take
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Take -->
+
+    <owl:Class rdf:about="cg_verbs#Take">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Take"/>
+        <rdfs:label xml:lang="en">take</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prends</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prends</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prend</rdfs:label>
+        <rdfs:label xml:lang="en">takes</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prenons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prenez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prennent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Take"/>
+        <rdfs:label xml:lang="en">took</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakeSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakePastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakePastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Take"/>
+        <rdfs:label xml:lang="en">had taken</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#TakeTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#TakeTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#TakePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient pris</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Cut
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Cut -->
+
+    <owl:Class rdf:about="cg_verbs#Cut">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Cut"/>
+        <rdfs:label xml:lang="en">cut</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupe</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupes</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupe</rdfs:label>
+        <rdfs:label xml:lang="en">cuts</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#CutTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">coupent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Cut"/>
+        <rdfs:label xml:lang="en">cut</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#CutTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Cut"/>
+        <rdfs:label xml:lang="en">had cut</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez coupé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#CutTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#CutTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#CutPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient coupé</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Mix
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Mix -->
+
+    <owl:Class rdf:about="cg_verbs#Mix">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Mix"/>
+        <rdfs:label xml:lang="en">mix</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélange</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélanges</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélange</rdfs:label>
+        <rdfs:label xml:lang="en">mixes</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélangeons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélangez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#MixTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">mélangent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Mix"/>
+        <rdfs:label xml:lang="en">mixed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#MixTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Mix"/>
+        <rdfs:label xml:lang="en">had mixed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez mélangé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#MixTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#MixTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#MixPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient mélangé</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Remove
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Remove -->
+
+    <owl:Class rdf:about="cg_verbs#Remove">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Remove"/>
+        <rdfs:label xml:lang="en">remove</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlève</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlèves</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlève</rdfs:label>
+        <rdfs:label xml:lang="en">removes</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlevons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlevez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">enlèvent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Remove"/>
+        <rdfs:label xml:lang="en">removed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemoveSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemovePastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemovePastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Remove"/>
+        <rdfs:label xml:lang="en">had removed</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez enlevé</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#RemoveTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#RemoveTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#RemovePastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient enlevé</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Drop
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Drop -->
+
+    <owl:Class rdf:about="cg_verbs#Drop">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Drop"/>
+        <rdfs:label xml:lang="en">drop</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâche</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâches</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâche</rdfs:label>
+        <rdfs:label xml:lang="en">drops</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâchons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâchez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#DropTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">lâchent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Drop"/>
+        <rdfs:label xml:lang="en">dropped</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#DropTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Drop"/>
+        <rdfs:label xml:lang="en">had dropped</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez lâché</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#DropTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#DropTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#DropPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient lâché</rdfs:label>
+    </owl:Class>
+
+     <!--
+    ///////////////////
+    // Pick
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Pick -->
+
+    <owl:Class rdf:about="cg_verbs#Pick">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pick"/>
+        <rdfs:label xml:lang="en">pick</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prends</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prends</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">prend</rdfs:label>
+        <rdfs:label xml:lang="en">picks</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prenons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prenez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#PickTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">prennent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pick"/>
+        <rdfs:label xml:lang="en">picked</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#PickTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Pick"/>
+        <rdfs:label xml:lang="en">had picked</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez pris</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#PickTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#PickTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PickPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient pris</rdfs:label>
+    </owl:Class>
+
+     <!--
+    ///////////////////
+    // Show
+    ///////////////////
+     -->
+
+
+    <!-- cg_verbs#Show -->
+
+    <owl:Class rdf:about="cg_verbs#Show">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ActionVerb"/>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Show"/>
+        <rdfs:label xml:lang="en">show</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">montre</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">montres</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTSPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">montre</rdfs:label>
+        <rdfs:label xml:lang="en">shows</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">montrons</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">montrez</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPSimplePresent -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTPPSimplePresent">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePresent"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">montrent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#SimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Show"/>
+        <rdfs:label xml:lang="en">shown</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">ai montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">as montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowTSPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTSPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">a montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avons montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avez montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowTPPSimplePast -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTPPSimplePast">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowSimplePast"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">ont montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#PastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#Show"/>
+        <rdfs:label xml:lang="en">had shown</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avais montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowTSPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTSPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdSingularPersonalForm"/>
+        <rdfs:label xml:lang="fr">avait montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowFPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowFPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#FirstPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avions montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowSPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowSPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#SecondPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">aviez montré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_verbs#ShowTPPPastParticiple -->
+
+    <owl:Class rdf:about="cg_verbs#ShowTPPPastParticiple">
+        <rdfs:subClassOf rdf:resource="cg_verbs#ShowPastParticiple"/>
+        <rdfs:subClassOf rdf:resource="cg_verbs#ThirdPluralPersonalForm"/>
+        <rdfs:label xml:lang="fr">avaient montré</rdfs:label>
+    </owl:Class>
+
+</rdf:RDF>
+
+<!-- Generated by the ontologenius https://sarthou.github.io/ontologenius/ -->

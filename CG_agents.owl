@@ -3,6 +3,7 @@
      xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
      xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,6 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
     </owl:Ontology>
     
 
@@ -182,7 +184,7 @@
 
     <owl:Class rdf:about="cg_agents#Agent">
         <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">agent</rdfs:label>
         <rdfs:label xml:lang="fr">agent</rdfs:label>
     </owl:Class>
@@ -201,7 +203,7 @@
 
     <owl:Class rdf:about="cg_agents#Human">
         <rdfs:subClassOf rdf:resource="cg_agents#Agent"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <owl:disjointWith rdf:resource="cg_agents#Robot"/>
         <rdfs:label xml:lang="fr">humain</rdfs:label>
         <rdfs:label xml:lang="en">human</rdfs:label>
@@ -213,7 +215,7 @@
 
     <owl:Class rdf:about="cg_agents#Robot">
         <rdfs:subClassOf rdf:resource="cg_agents#Agent"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">robot</rdfs:label>
         <rdfs:label xml:lang="fr">robot</rdfs:label>
     </owl:Class>

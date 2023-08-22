@@ -3,6 +3,7 @@
      xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_building#"
      xmlns:cg_building="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_building#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,6 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_building">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
     </owl:Ontology>
     
 
@@ -75,7 +77,7 @@
 
     <owl:Class rdf:about="cg_building#Door">
         <rdfs:subClassOf rdf:resource="cg_building#BuildingPart"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">door</rdfs:label>
         <rdfs:label xml:lang="fr">porte</rdfs:label>
     </owl:Class>
@@ -86,7 +88,7 @@
 
     <owl:Class rdf:about="cg_building#Floor">
         <rdfs:subClassOf rdf:resource="cg_building#BuildingPart"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">floor</rdfs:label>
         <rdfs:label xml:lang="fr">sol</rdfs:label>
     </owl:Class>
@@ -97,7 +99,7 @@
 
     <owl:Class rdf:about="cg_building#Wall">
         <rdfs:subClassOf rdf:resource="cg_building#BuildingPart"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">wall</rdfs:label>
         <rdfs:label xml:lang="fr">mur</rdfs:label>
     </owl:Class>
@@ -108,7 +110,7 @@
 
     <owl:Class rdf:about="cg_building#Window">
         <rdfs:subClassOf rdf:resource="cg_building#BuildingPart"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">window</rdfs:label>
         <rdfs:label xml:lang="fr">fenetre</rdfs:label>
     </owl:Class>

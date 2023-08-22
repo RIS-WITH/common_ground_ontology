@@ -3,6 +3,7 @@
      xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
      xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -11,6 +12,7 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
     </owl:Ontology>
     
 
@@ -29,7 +31,7 @@
 
     <owl:Class rdf:about="cg_objects#Box">
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">boite</rdfs:label>
         <rdfs:label xml:lang="en">box</rdfs:label>
     </owl:Class>
@@ -41,7 +43,7 @@
     <owl:Class rdf:about="cg_objects#ConsoleTable">
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">console</rdfs:label>
         <rdfs:label xml:lang="en">console table</rdfs:label>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_console.obj</cg_entities:hasMesh>
@@ -53,7 +55,7 @@
 
     <owl:Class rdf:about="cg_objects#Container">
         <rdfs:subClassOf rdf:resource="cg_objects#Object"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">container</rdfs:label>
         <rdfs:label xml:lang="fr">conteneur</rdfs:label>
     </owl:Class>
@@ -65,7 +67,7 @@
     <owl:Class rdf:about="cg_objects#Cube">
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">block</rdfs:label>
         <rdfs:label xml:lang="fr">cube</rdfs:label>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/cube.stl</cg_entities:hasMesh>
@@ -80,7 +82,7 @@
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">drawer</rdfs:label>
         <rdfs:label xml:lang="fr">tiroir</rdfs:label>
     </owl:Class>
@@ -91,7 +93,7 @@
 
     <owl:Class rdf:about="cg_objects#Fan">
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">fan</rdfs:label>
         <rdfs:label xml:lang="fr">ventilateur</rdfs:label>
     </owl:Class>
@@ -102,7 +104,7 @@
 
     <owl:Class rdf:about="cg_objects#Furniture">
         <rdfs:subClassOf rdf:resource="cg_objects#Object"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">furniture</rdfs:label>
         <rdfs:label xml:lang="fr">meuble</rdfs:label>
     </owl:Class>
@@ -134,7 +136,7 @@
     <owl:Class rdf:about="cg_objects#Mug">
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/mug.obj</cg_entities:hasMesh>
         <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/mug.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">mug</rdfs:label>
@@ -147,7 +149,7 @@
 
     <owl:Class rdf:about="cg_objects#Object">
         <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">object</rdfs:label>
         <rdfs:label xml:lang="fr">objet</rdfs:label>
     </owl:Class>
@@ -159,7 +161,7 @@
     <owl:Class rdf:about="cg_objects#PaperBin">
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/paper_bin.obj</cg_entities:hasMesh>
         <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/paper_bin.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">paper bin</rdfs:label>
@@ -172,7 +174,7 @@
 
     <owl:Class rdf:about="cg_objects#Pen">
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pen.obj</cg_entities:hasMesh>
         <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pen.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">pen</rdfs:label>
@@ -194,7 +196,7 @@
     <owl:Class rdf:about="cg_objects#Pint">
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pint.obj</cg_entities:hasMesh>
         <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pint.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">pint</rdfs:label>
@@ -207,7 +209,7 @@
 
     <owl:Class rdf:about="cg_objects#PostIt">
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">post-it</rdfs:label>
         <rdfs:label xml:lang="fr">post-it</rdfs:label>
     </owl:Class>
@@ -228,7 +230,7 @@
     <owl:Class rdf:about="cg_objects#Shelf">
         <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">etagere</rdfs:label>
         <rdfs:label xml:lang="en">shelf</rdfs:label>
     </owl:Class>
@@ -239,7 +241,7 @@
 
     <owl:Class rdf:about="cg_objects#StorageBox">
         <rdfs:subClassOf rdf:resource="cg_objects#Box"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">boite de rangement</rdfs:label>
         <rdfs:label xml:lang="en">storage box</rdfs:label>
     </owl:Class>
@@ -250,7 +252,7 @@
 
     <owl:Class rdf:about="cg_objects#Support">
         <rdfs:subClassOf rdf:resource="cg_objects#Object"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
     </owl:Class>
     
 
@@ -259,7 +261,7 @@
 
     <owl:Class rdf:about="cg_objects#TV">
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">tele</rdfs:label>
         <rdfs:label xml:lang="en">tv</rdfs:label>
     </owl:Class>
@@ -271,7 +273,7 @@
     <owl:Class rdf:about="cg_objects#Table">
         <rdfs:subClassOf rdf:resource="cg_objects#Furniture"/>
         <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">table</rdfs:label>
         <rdfs:label xml:lang="fr">table</rdfs:label>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_table.dae</cg_entities:hasMesh>

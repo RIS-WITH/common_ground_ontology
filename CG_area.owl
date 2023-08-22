@@ -4,6 +4,7 @@
      xmlns:cg_area="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_area#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xmlns:cg_geometric="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_geometric#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,6 +14,7 @@
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_area">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_geometric"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
     </owl:Ontology>
     
 
@@ -116,7 +118,7 @@
 
     <owl:Class rdf:about="cg_area#Area">
         <rdfs:subClassOf rdf:resource="cg_area#Location"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">area</rdfs:label>
         <rdfs:label xml:lang="fr">zone</rdfs:label>
     </owl:Class>
@@ -146,7 +148,7 @@
 
     <owl:Class rdf:about="cg_area#Room">
         <rdfs:subClassOf rdf:resource="cg_area#Area"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">room</rdfs:label>
         <rdfs:label xml:lang="fr">salle</rdfs:label>
     </owl:Class>
@@ -157,7 +159,7 @@
 
     <owl:Class rdf:about="cg_area#Spot">
         <rdfs:subClassOf rdf:resource="cg_area#Location"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrMaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="fr">endroit</rdfs:label>
         <rdfs:label xml:lang="en">spot</rdfs:label>
     </owl:Class>

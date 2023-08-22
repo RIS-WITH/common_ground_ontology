@@ -1,0 +1,656 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- cg_language#LanguageModel -->
+
+    <owl:Class rdf:about="cg_language#LanguageModel">
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#CoodinationConjunction -->
+
+    <owl:Class rdf:about="cg_language#CoodinationConjunction">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // PersonalForm
+    ///////////////////
+     -->
+
+
+    <!-- cg_language#PersonalForm -->
+
+    <owl:Class rdf:about="cg_language#PersonalForm">
+    </owl:Class>
+
+
+
+    <!-- cg_language#SingularPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#SingularPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalForm"/>
+    </owl:Class>
+
+
+
+    <!-- cg_language#PluralPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#PluralPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalForm"/>
+    </owl:Class>
+
+
+
+    <!-- cg_language#FirstPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#FirstPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#SecondPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#SecondPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#ThirdPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#ThirdPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalForm"/>
+    </owl:Class>
+
+
+
+    <!-- cg_language#FirstSingularPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#FirstSingularPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#FirstPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#SecondSingularPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#SecondSingularPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#SecondPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#ThirdSingularPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#ThirdSingularPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalForm"/>
+    </owl:Class>
+
+
+
+    <!-- cg_language#FirstPluralPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#FirstPluralPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#FirstPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#SecondPluralPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#SecondPluralPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#SecondPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalForm"/>
+    </owl:Class>
+
+
+    <!-- cg_language#ThirdPluralPersonalForm -->
+
+    <owl:Class rdf:about="cg_language#ThirdPluralPersonalForm">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalForm"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // PersonalPronoun
+    ///////////////////
+     -->
+
+
+    <!-- cg_language#PersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#PersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#SubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalPronoun"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#ObjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#ObjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalPronoun"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#PossessivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#PossessivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalPronoun"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SingularPersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#SingularPersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalPronoun"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#PluralPersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#PluralPersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#PersonalPronoun"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FirstSingularSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#FirstSingularSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#FirstPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">I</rdfs:label>
+        <rdfs:label xml:lang="fr">je</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SecondSingularSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#SecondSingularSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#SecondPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">you</rdfs:label>
+        <rdfs:label xml:lang="fr">tu</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#ThirdSingularSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#ThirdSingularSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SingularPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">it</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#ThirdFemaleSingularSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#ThirdFemaleSingularSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdSingularSubjectivePersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="en">she</rdfs:label>
+        <rdfs:label xml:lang="fr">elle</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#ThirdMaleSingularSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#ThirdMaleSingularSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdSingularSubjectivePersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
+        <rdfs:label xml:lang="en">he</rdfs:label>
+        <rdfs:label xml:lang="fr">il</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FirstPluralPersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#FirstPluralSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#FirstPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">we</rdfs:label>
+        <rdfs:label xml:lang="fr">nous</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SecondPluralSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#SecondPluralSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#SecondPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">you</rdfs:label>
+        <rdfs:label xml:lang="fr">vous</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#ThirdPluralSubjectivePersonalPronoun -->
+
+    <owl:Class rdf:about="cg_language#SecondPluralSubjectivePersonalPronoun">
+        <rdfs:subClassOf rdf:resource="cg_language#ThirdPersonalForm"/>
+        <rdfs:subClassOf rdf:resource="cg_language#PluralPersonalPronoun"/>
+        <rdfs:subClassOf rdf:resource="cg_language#SubjectivePersonalPronoun"/>
+        <rdfs:label xml:lang="en">they</rdfs:label>
+        <rdfs:label xml:lang="fr">ils</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // Gender
+    ///////////////////
+     -->
+
+
+    <!-- cg_language#Gender -->
+
+    <owl:Class rdf:about="cg_language#Gender">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemaleGender -->
+
+    <owl:Class rdf:about="cg_language#FemaleGender">
+        <rdfs:subClassOf rdf:resource="cg_language#Gender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MaleGender -->
+
+    <owl:Class rdf:about="cg_language#MaleGender">
+        <rdfs:subClassOf rdf:resource="cg_language#Gender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FrFemaleGender -->
+
+    <owl:Class rdf:about="cg_language#FrFemaleGender">
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FrMaleGender -->
+
+    <owl:Class rdf:about="cg_language#FrMaleGender">
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // DefinedArticle
+    ///////////////////
+     -->
+
+
+    <!-- cg_language#DefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#DefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+        <rdfs:label xml:lang="en">the</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SingularDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#SingularDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#DefinedArticle"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#PluralDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#PluralDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#DefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemaleSingularDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#FemaleSingularDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">la</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MaleSingularDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#MaleSingularDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">le</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemalePluralDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#FemalePluralDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralDefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MalePluralrDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#MalePluralrDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralDefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#VowelSingularDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#VowelSingularDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDefinedArticle"/>
+        <rdfs:label xml:lang="fr">l'</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#VowelPluralDefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#VowelPluralDefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralDefinedArticle"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////
+    // UndefinedArticle
+    ///////////////////
+     -->
+
+
+    <!-- cg_language#UndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#UndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SingularUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#SingularUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#UndefinedArticle"/>
+        <rdfs:label xml:lang="en">the one</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#PluralUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#PluralUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#UndefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
+        <rdfs:label xml:lang="en">the ones</rdfs:label>
+        <rdfs:label xml:lang="en">those</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemaleSingularUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#FemaleSingularUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularUndefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">celle</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MaleSingularUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#MaleSingularUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularUndefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">celui</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemalePluralUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#FemalePluralUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">celles</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MalePluralrUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#MalePluralrUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">ceux</rdfs:label>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- cg_language#CcAddition -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcAddition">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">and</rdfs:label>
+        <rdfs:label xml:lang="fr">et</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- cg_language#CcNegation -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcNegation">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">nor</rdfs:label>
+        <rdfs:label xml:lang="fr">ni</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- cg_language#CcChoice -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcChoice">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">or</rdfs:label>
+        <rdfs:label xml:lang="fr">ou</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- cg_language#CcRestriction -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcRestriction">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">but</rdfs:label>
+        <rdfs:label xml:lang="fr">mais</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- cg_language#CcConsequence -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcConsequence">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">so</rdfs:label>
+        <rdfs:label xml:lang="en">thus</rdfs:label>
+        <rdfs:label xml:lang="en">therefore</rdfs:label>
+        <rdfs:label xml:lang="fr">donc</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!-- cg_language#CcCausality -->
+
+    <owl:NamedIndividual rdf:about="cg_language#CcCausality">
+        <rdf:type rdf:resource="cg_language#CoodinationConjunction"/>
+        <rdfs:label xml:lang="en">because</rdfs:label>
+        <rdfs:label xml:lang="fr">car</rdfs:label>
+    </owl:NamedIndividual>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+             <rdf:Description rdf:about="cg_language#CcAddition"/>
+             <rdf:Description rdf:about="cg_language#CcNegation"/>
+             <rdf:Description rdf:about="cg_language#CcChoice"/>
+             <rdf:Description rdf:about="cg_language#CcRestriction"/>
+             <rdf:Description rdf:about="cg_language#CcConsequence"/>
+             <rdf:Description rdf:about="cg_language#CcCausality"/>
+        </owl:members>
+    </rdf:Description>
+
+</rdf:RDF>
+

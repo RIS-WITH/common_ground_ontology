@@ -2,13 +2,16 @@
 <rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+    </owl:Ontology>
 
 
     <!-- 
@@ -248,7 +251,7 @@
 
     <owl:Class rdf:about="cg_entities#Color">
         <rdfs:subClassOf rdf:resource="cg_entities#PhysicalQuality"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">color</rdfs:label>
         <rdfs:label xml:lang="fr">couleur</rdfs:label>
     </owl:Class>
@@ -303,7 +306,7 @@
 
     <owl:Class rdf:about="cg_entities#Shape">
         <rdfs:subClassOf rdf:resource="cg_entities#PhysicalQuality"/>
-        <rdfs:subClassOf rdf:resource="cg_entities#FrFemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">forme</rdfs:label>
         <rdfs:label xml:lang="en">shape</rdfs:label>
     </owl:Class>
@@ -323,18 +326,6 @@
     <owl:Class rdf:about="cg_entities#Weight">
         <rdfs:subClassOf rdf:resource="cg_entities#PhysicalQuality"/>
     </owl:Class>
-    
-
-
-    <!-- cg_entities#FrFemaleGender -->
-
-    <owl:Class rdf:about="cg_entities#FrFemaleGender"/>
-    
-
-
-    <!-- cg_entities#FrMaleGender -->
-
-    <owl:Class rdf:about="cg_entities#FrMaleGender"/>
     
 
 

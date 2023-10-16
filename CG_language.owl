@@ -624,7 +624,98 @@
     <owl:Class rdf:about="cg_language#MalePluralrUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
-        <rdfs:label xml:lang="fr">ceux</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!--
+    /////////////////////////
+    // DemonstrativeDeterminant
+    /////////////////////////
+     -->
+
+
+    <!-- cg_language#DemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#DemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#SingularDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#SingularDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#DemonstrativeDeterminant"/>
+        <rdfs:label xml:lang="en">this</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#PluralDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#PluralDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#DemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
+        <rdfs:label xml:lang="en">these</rdfs:label>
+        <rdfs:label xml:lang="fr">ces</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemaleSingularDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#FemaleSingularDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">cette</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MaleSingularDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#MaleSingularDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">ce</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#VowelMaleSingularDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#VowelMaleSingularDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:label xml:lang="fr">cet</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#FemalePluralDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#FemalePluralDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralDemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#MalePluralDemonstrativeDeterminant -->
+
+    <owl:Class rdf:about="cg_language#MalePluralDemonstrativeDeterminant">
+        <rdfs:subClassOf rdf:resource="cg_language#PluralDemonstrativeDeterminant"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
     </owl:Class>
 
 

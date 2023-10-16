@@ -68,7 +68,6 @@
         <rdfs:subPropertyOf rdf:resource="common_ground#hasGraphicalEntity"/>
         <rdfs:domain rdf:resource="cg_objects#Object"/>
         <rdfs:range rdf:resource="common_ground#Border"/>
-        <rdfs:label xml:lang="fr">avec une</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -89,9 +88,8 @@
         <rdfs:subPropertyOf rdf:resource="cg_entities#visualRelation"/>
         <rdfs:domain rdf:resource="cg_objects#Object"/>
         <rdfs:range rdf:resource="common_ground#GraphicalEntity"/>
-        <rdfs:label xml:lang="fr">avec un</rdfs:label>
-        <rdfs:label xml:lang="en">with a</rdfs:label>
-        <onto:label xml:lang="en">with the</onto:label>
+        <rdfs:label xml:lang="fr">avec</rdfs:label>
+        <rdfs:label xml:lang="en">with</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -138,7 +136,7 @@
 
     <owl:Class rdf:about="common_ground#Border">
         <rdfs:subClassOf rdf:resource="common_ground#GraphicalEntity"/>
-        <!--rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/-->
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="fr">bordure</rdfs:label>
         <rdfs:label xml:lang="en">border</rdfs:label>
         <onto:label xml:lang="fr">contour</onto:label>
@@ -150,6 +148,7 @@
 
     <owl:Class rdf:about="common_ground#Circle">
         <rdfs:subClassOf rdf:resource="common_ground#Figure"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="fr">cercle</rdfs:label>
         <rdfs:label xml:lang="en">circle</rdfs:label>
         <rdfs:label xml:lang="fr">rond</rdfs:label>
@@ -172,6 +171,7 @@
 
     <owl:Class rdf:about="common_ground#Figure">
         <rdfs:subClassOf rdf:resource="common_ground#GraphicalEntity"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">figure</rdfs:label>
         <rdfs:label xml:lang="fr">forme</rdfs:label>
     </owl:Class>
@@ -200,6 +200,7 @@
 
     <owl:Class rdf:about="common_ground#Square">
         <rdfs:subClassOf rdf:resource="common_ground#Figure"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="fr">carré</rdfs:label>
         <rdfs:label xml:lang="en">square</rdfs:label>
     </owl:Class>
@@ -235,6 +236,7 @@
 
     <owl:Class rdf:about="common_ground#Triangle">
         <rdfs:subClassOf rdf:resource="common_ground#Figure"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">triangle</rdfs:label>
         <rdfs:label xml:lang="fr">triangle</rdfs:label>
     </owl:Class>

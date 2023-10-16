@@ -30,10 +30,16 @@
 
 
 
-
     <!-- cg_language#CoodinationConjunction -->
 
     <owl:Class rdf:about="cg_language#CoodinationConjunction">
+        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+    </owl:Class>
+
+
+    <!-- cg_language#Pronoun -->
+
+    <owl:Class rdf:about="cg_language#Pronoun">
         <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
     </owl:Class>
 
@@ -153,7 +159,7 @@
     <!-- cg_language#PersonalPronoun -->
 
     <owl:Class rdf:about="cg_language#PersonalPronoun">
-        <rdfs:subClassOf rdf:resource="cg_language#LanguageModel"/>
+        <rdfs:subClassOf rdf:resource="cg_language#Pronoun"/>
     </owl:Class>
 
 
@@ -567,7 +573,17 @@
 
     <owl:Class rdf:about="cg_language#SingularUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#UndefinedArticle"/>
-        <rdfs:label xml:lang="en">the one</rdfs:label>
+        <rdfs:label xml:lang="en">a</rdfs:label>
+    </owl:Class>
+
+
+
+
+    <!-- cg_language#VowelSingularUndefinedArticle -->
+
+    <owl:Class rdf:about="cg_language#VowelSingularUndefinedArticle">
+        <rdfs:subClassOf rdf:resource="cg_language#UndefinedArticle"/>
+        <rdfs:label xml:lang="en">an</rdfs:label>
     </owl:Class>
 
 
@@ -579,8 +595,7 @@
         <rdfs:subClassOf rdf:resource="cg_language#UndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
         <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
-        <rdfs:label xml:lang="en">the ones</rdfs:label>
-        <rdfs:label xml:lang="en">those</rdfs:label>
+        <rdfs:label xml:lang="fr">des</rdfs:label>
     </owl:Class>
 
 
@@ -591,7 +606,7 @@
     <owl:Class rdf:about="cg_language#FemaleSingularUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#SingularUndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
-        <rdfs:label xml:lang="fr">celle</rdfs:label>
+        <rdfs:label xml:lang="fr">une</rdfs:label>
     </owl:Class>
 
 
@@ -602,7 +617,7 @@
     <owl:Class rdf:about="cg_language#MaleSingularUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#SingularUndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
-        <rdfs:label xml:lang="fr">celui</rdfs:label>
+        <rdfs:label xml:lang="fr">un</rdfs:label>
     </owl:Class>
 
 
@@ -613,15 +628,14 @@
     <owl:Class rdf:about="cg_language#FemalePluralUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
-        <rdfs:label xml:lang="fr">celles</rdfs:label>
     </owl:Class>
 
 
 
 
-    <!-- cg_language#MalePluralrUndefinedArticle -->
+    <!-- cg_language#MalePluralUndefinedArticle -->
 
-    <owl:Class rdf:about="cg_language#MalePluralrUndefinedArticle">
+    <owl:Class rdf:about="cg_language#MalePluralUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
         <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
     </owl:Class>

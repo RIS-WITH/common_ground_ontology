@@ -67,8 +67,8 @@
     <owl:ObjectProperty rdf:about="cg_area#isInRoom">
         <rdfs:subPropertyOf rdf:resource="cg_area#isInArea"/>
         <owl:inverseOf rdf:resource="cg_area#roomHasIn"/>
-        <rdfs:range rdf:resource="cg_entities#Entity"/>
-        <rdfs:domain rdf:resource="cg_area#Room"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:range rdf:resource="cg_area#Room"/>
     </owl:ObjectProperty>
     
 
@@ -78,8 +78,8 @@
     <owl:ObjectProperty rdf:about="cg_area#isInArea">
         <rdfs:subPropertyOf rdf:resource="cg_geometric#isIn"/>
         <owl:inverseOf rdf:resource="cg_area#areaHasIn"/>
-        <rdfs:range rdf:resource="cg_entities#Entity"/>
-        <rdfs:domain rdf:resource="cg_area#Area"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:range rdf:resource="cg_area#Area"/>
     </owl:ObjectProperty>
     
 
@@ -88,8 +88,8 @@
 
     <owl:ObjectProperty rdf:about="cg_area#areaHasIn">
         <rdfs:subPropertyOf rdf:resource="cg_geometric#hasIn"/>
-        <rdfs:range rdf:resource="cg_area#Area"/>
-        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:domain rdf:resource="cg_area#Area"/>
+        <rdfs:range rdf:resource="cg_entities#Entity"/>
     </owl:ObjectProperty>
     
 

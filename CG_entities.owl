@@ -504,6 +504,26 @@
         <rdfs:label xml:lang="en">yellow</rdfs:label>
         <cg_entities:hexRgbValue rdf:datatype="cg_entities#hexrbg">0xFFD700</cg_entities:hexRgbValue>
     </owl:NamedIndividual>
+
+
+    <!-- cg_entities#purple -->
+
+    <owl:NamedIndividual rdf:about="cg_entities#purple">
+        <rdf:type rdf:resource="cg_entities#Color"/>
+        <rdfs:label xml:lang="en">purple</rdfs:label>
+        <rdfs:label xml:lang="fr">violet</rdfs:label>
+        <cg_entities:hexRgbValue rdf:datatype="cg_entities#hexrbg">0x800080</cg_entities:hexRgbValue>
+    </owl:NamedIndividual>
+    
+
+    <!-- cg_entities#silver -->
+
+    <owl:NamedIndividual rdf:about="cg_entities#silver">
+        <rdf:type rdf:resource="cg_entities#Color"/>
+        <rdfs:label xml:lang="en">silver</rdfs:label>
+        <rdfs:label xml:lang="fr">argent</rdfs:label>
+        <cg_entities:hexRgbValue rdf:datatype="cg_entities#hexrbg">0xC0C0C0</cg_entities:hexRgbValue>
+    </owl:NamedIndividual>
     
 
 

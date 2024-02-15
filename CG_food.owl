@@ -39,6 +39,7 @@
 
     <owl:Class rdf:about="cg_food#CookingHelper">
         <rdfs:subClassOf rdf:resource="cg_food#Food"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">Cooking Helper</rdfs:label>
         <rdfs:label xml:lang="fr">Aide Culinaire</rdfs:label>
     </owl:Class>
@@ -84,6 +85,7 @@
 
     <owl:Class rdf:about="cg_food#Meat">
         <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <rdfs:label xml:lang="en">Meat</rdfs:label>
         <rdfs:label xml:lang="fr">Viande</rdfs:label>
     </owl:Class>
@@ -106,6 +108,225 @@
         <rdfs:label xml:lang="fr">Produit de la mer</rdfs:label>
     </owl:Class>
 
+
+    <!-- cg_food#Fat -->
+
+    <owl:Class rdf:about="cg_food#Fat">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Fat</rdfs:label>
+        <rdfs:label xml:lang="fr">Matière grasse</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Dairy -->
+
+    <owl:Class rdf:about="cg_food#Dairy">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Dairy</rdfs:label>
+        <rdfs:label xml:lang="fr">Produit Laitier</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Oil -->
+
+    <owl:Class rdf:about="cg_food#Oil">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Oil</rdfs:label>
+        <rdfs:label xml:lang="fr">Huile</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#SweetProduct -->
+
+    <owl:Class rdf:about="cg_food#SweetProduct">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Sweet product</rdfs:label>
+        <rdfs:label xml:lang="fr">Produit sucré</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Cereal -->
+
+    <owl:Class rdf:about="cg_food#Cereal">
+        <rdfs:subClassOf rdf:resource="cg_food#Starch"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Cereal</rdfs:label>
+        <rdfs:label xml:lang="fr">Céréale</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#CerealProduct -->
+
+    <owl:Class rdf:about="cg_food#CerealProduct">
+        <rdfs:subClassOf rdf:resource="cg_food#Cereal"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Cereal product</rdfs:label>
+        <rdfs:label xml:lang="fr">produit céréalier</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Condiment -->
+
+    <owl:Class rdf:about="cg_food#Condiment">
+        <rdfs:subClassOf rdf:resource="cg_food#CookingHelper"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Condiment</rdfs:label>
+        <rdfs:label xml:lang="fr">Condiment</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#FoodAdditive -->
+
+    <owl:Class rdf:about="cg_food#FoodAdditive">
+        <rdfs:subClassOf rdf:resource="cg_food#CookingHelper"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">FoodAdditive</rdfs:label>
+        <rdfs:label xml:lang="fr">Additif alimentaire</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Sugar -->
+
+    <owl:Class rdf:about="cg_food#Sugar">
+        <rdfs:subClassOf rdf:resource="cg_food#Condiment"/>
+        <rdfs:label xml:lang="en">Condiment</rdfs:label>
+        <rdfs:label xml:lang="fr">Condiment</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Spice -->
+
+    <owl:Class rdf:about="cg_food#Spice">
+        <rdfs:subClassOf rdf:resource="cg_food#Condiment"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Spice</rdfs:label>
+        <rdfs:label xml:lang="fr">épice</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Salt -->
+
+    <owl:Class rdf:about="cg_food#Salt">
+        <rdfs:subClassOf rdf:resource="cg_food#Condiment"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Salt</rdfs:label>
+        <rdfs:label xml:lang="fr">sel</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#BakingPowder -->
+
+    <owl:Class rdf:about="cg_food#BakingPowder">
+        <rdfs:subClassOf rdf:resource="cg_food#FoodAdditive"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">BakingPowder</rdfs:label>
+        <rdfs:label xml:lang="fr">Levure</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Potato -->
+
+    <owl:Class rdf:about="cg_food#Potato">
+        <rdfs:subClassOf rdf:resource="cg_food#Starch"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Potato</rdfs:label>
+        <rdfs:label xml:lang="fr">Pomme de terre</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Legumin -->
+
+    <owl:Class rdf:about="cg_food#Legumin">
+        <rdfs:subClassOf rdf:resource="cg_food#Starch"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Legumin</rdfs:label>
+        <rdfs:label xml:lang="fr">légumineuse</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Flour -->
+
+    <owl:Class rdf:about="cg_food#Flour">
+        <rdfs:subClassOf rdf:resource="cg_food#CerealProduct"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Flour</rdfs:label>
+        <rdfs:label xml:lang="fr">farine</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Pasta -->
+
+    <owl:Class rdf:about="cg_food#Pasta">
+        <rdfs:subClassOf rdf:resource="cg_food#CerealProduct"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Pasta</rdfs:label>
+        <rdfs:label xml:lang="fr">pâte</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Ham -->
+
+    <owl:Class rdf:about="cg_food#Ham">
+        <rdfs:subClassOf rdf:resource="cg_food#Meat"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Ham</rdfs:label>
+        <rdfs:label xml:lang="fr">jambon</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Bacon -->
+
+    <owl:Class rdf:about="cg_food#Bacon">
+        <rdfs:subClassOf rdf:resource="cg_food#Meat"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">bacon</rdfs:label>
+        <rdfs:label xml:lang="fr">lardon</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Milk -->
+
+    <owl:Class rdf:about="cg_food#Milk">
+        <rdfs:subClassOf rdf:resource="cg_food#Dairy"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Milk</rdfs:label>
+        <rdfs:label xml:lang="fr">lait</rdfs:label>
+    </owl:Class>    
+
+
+    <!-- cg_food#Cheese -->
+
+    <owl:Class rdf:about="cg_food#Cheese">
+        <rdfs:subClassOf rdf:resource="cg_food#Dairy"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Cheese</rdfs:label>
+        <rdfs:label xml:lang="fr">fromage</rdfs:label>
+    </owl:Class>   
+
+
+    <!-- cg_food#Cream -->
+
+    <owl:Class rdf:about="cg_food#Cream">
+        <rdfs:subClassOf rdf:resource="cg_food#Dairy"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">Cream</rdfs:label>
+        <rdfs:label xml:lang="fr">crème</rdfs:label>
+    </owl:Class>   
+
+
+    <!-- cg_food#Butter -->
+
+    <owl:Class rdf:about="cg_food#Butter">
+        <rdfs:subClassOf rdf:resource="cg_food#Dairy"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">Butter</rdfs:label>
+        <rdfs:label xml:lang="fr">beurre</rdfs:label>
+    </owl:Class>   
+
+    
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //

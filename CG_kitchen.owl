@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_kitchen#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_kitchen#"
+     xmlns:cg_kitchen="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_kitchen#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_kitchen">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+    <!-- cg_kitchen#KitchenEquipment -->
+
+    <owl:Class rdf:about="cg_kitchen#KitchenEquipment">
+        <rdfs:subClassOf rdf:resource="cg_objects#Objects"/>
+        <rdfs:label xml:lang="en">kitchen equipment</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement de cuisine</rdfs:label>
+    </owl:Class>
+
+     <!-- cg_kitchen#KitchenEquipment -->
+
+    <owl:Class rdf:about="cg_kitchen#KitchenWare">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenEquipment"/>
+        <rdfs:label xml:lang="en">kitchenware</rdfs:label>
+        <rdfs:label xml:lang="fr">matériel de cuisine</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Cutlery -->
+
+    <owl:Class rdf:about="cg_kitchen#Cutlery">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
+        <rdfs:label xml:lang="en">cutlery</rdfs:label>
+        <rdfs:label xml:lang="fr">couvert</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#DinnerWare -->
+
+    <owl:Class rdf:about="cg_kitchen#DinnerWare">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Cutlery"/>
+        <rdfs:label xml:lang="en">dinnerware</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement de table</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#KitchenKnife -->
+
+    <owl:Class rdf:about="cg_kitchen#KitchenKnife">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Cutlery"/>
+        <rdfs:label xml:lang="en">kitchen knife</rdfs:label>
+        <rdfs:label xml:lang="fr">couteau de cuisine</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Utensil -->
+
+    <owl:Class rdf:about="cg_kitchen#Utensil">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
+        <rdfs:label xml:lang="en">utensil</rdfs:label>
+        <rdfs:label xml:lang="fr">ustensile</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Spatula -->
+
+    <owl:Class rdf:about="cg_kitchen#Spatula">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:label xml:lang="en">spatula</rdfs:label>
+        <rdfs:label xml:lang="fr">spatule</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Ladle -->
+
+    <owl:Class rdf:about="cg_kitchen#Ladle">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:label xml:lang="en">ladle</rdfs:label>
+        <rdfs:label xml:lang="fr">louche</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Whisk -->
+
+    <owl:Class rdf:about="cg_kitchen#Whisk">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:label xml:lang="en">whisk</rdfs:label>
+        <rdfs:label xml:lang="fr">fouet</rdfs:label>
+    </owl:Class>
+
+     <!-- cg_kitchen#ChoppingBoard -->
+
+    <owl:Class rdf:about="cg_kitchen#ChoppingBoard">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
+        <rdfs:label xml:lang="en">chopping board</rdfs:label>
+        <rdfs:label xml:lang="fr">planche à découper</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#MixingContainer -->
+
+    <owl:Class rdf:about="cg_kitchen#MixingContainer">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
+        <rdfs:label xml:lang="en">mixing container</rdfs:label>
+        <rdfs:label xml:lang="fr">contenant pour mélange</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#BakingWare -->
+
+    <owl:Class rdf:about="cg_kitchen#BakingWare">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
+        <rdfs:label xml:lang="en">bakingware</rdfs:label>
+        <rdfs:label xml:lang="fr">matériel de cuisson</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#BakingTray -->
+
+    <owl:Class rdf:about="cg_kitchen#BakingTray">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#BakingWare"/>
+        <rdfs:label xml:lang="en">baking tray</rdfs:label>
+        <rdfs:label xml:lang="fr">plaque de cuisson</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#BakingWare -->
+
+    <owl:Class rdf:about="cg_kitchen#BakingDish">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#BakingWare"/>
+        <rdfs:label xml:lang="en">baking dish</rdfs:label>
+        <rdfs:label xml:lang="fr">plat de cuisson</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#HouseholdAppliance -->
+
+    <owl:Class rdf:about="cg_kitchen#HouseholdAppliance">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenEquipment"/>
+        <rdfs:label xml:lang="en">household appliance</rdfs:label>
+        <rdfs:label xml:lang="fr">équipement de maison</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#ElectronicAppliance -->
+
+    <owl:Class rdf:about="cg_kitchen#ElectronicAppliance">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#HouseholdAppliance"/>
+        <rdfs:label xml:lang="en">electronic appliance</rdfs:label>
+        <rdfs:label xml:lang="fr">électroménager</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Oven -->
+
+    <owl:Class rdf:about="cg_kitchen#Oven">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#ElectronicAppliance"/>
+        <rdfs:label xml:lang="en">oven</rdfs:label>
+        <rdfs:label xml:lang="fr">four</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Hotplate -->
+
+    <owl:Class rdf:about="cg_kitchen#Hotplate">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#ElectronicAppliance"/>
+        <rdfs:label xml:lang="en">hotplate</rdfs:label>
+        <rdfs:label xml:lang="fr">plaque de cuisson</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Dishwasher -->
+
+    <owl:Class rdf:about="cg_kitchen#Dishwasher">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#ElectronicAppliance"/>
+        <rdfs:label xml:lang="en">dishwasher</rdfs:label>
+        <rdfs:label xml:lang="fr">lave vaisselle</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Refrigerator -->
+
+    <owl:Class rdf:about="cg_kitchen#Refrigerator">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#ElectronicAppliance"/>
+        <rdfs:label xml:lang="en">refrigerator</rdfs:label>
+        <rdfs:label xml:lang="fr">réfrigerateur</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Sink -->
+
+    <owl:Class rdf:about="cg_kitchen#Sink">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#HouseholdAppliance"/>
+        <rdfs:label xml:lang="en">sink</rdfs:label>
+        <rdfs:label xml:lang="fr">évier</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Bowl -->
+
+    <owl:Class rdf:about="cg_kitchen#Bowl">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#MixingContainer"/>
+        <rdfs:label xml:lang="en">bowl</rdfs:label>
+        <rdfs:label xml:lang="fr">bol</rdfs:label>
+    </owl:Class>
+
+    <!-- cg_kitchen#Mold -->
+
+    <owl:Class rdf:about="cg_kitchen#Mold">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#BakingDish"/>
+        <rdfs:label xml:lang="en">mold</rdfs:label>
+        <rdfs:label xml:lang="fr">moule</rdfs:label>
+    </owl:Class>
+
+     <!-- cg_kitchen#CakeMould -->
+
+    <owl:Class rdf:about="cg_kitchen#CakeMold">
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Mold"/>
+        <rdfs:label xml:lang="en">cake mold</rdfs:label>
+        <rdfs:label xml:lang="fr">moule à gâteau</rdfs:label>
+    </owl:Class>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+   
+</rdf:RDF>

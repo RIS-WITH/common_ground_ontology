@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_food#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_food#"
+     xmlns:cg_food="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_food#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_food">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+    <!-- cg_food#Food -->
+
+    <owl:Class rdf:about="cg_food#Food">
+        <rdfs:subClassOf rdf:resource="cg_objects#Objects"/> <!-- a check avec bastien -->
+        <rdfs:label xml:lang="en">food</rdfs:label>
+        <rdfs:label xml:lang="fr">aliment</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#CookingHelper -->
+
+    <owl:Class rdf:about="cg_food#CookingHelper">
+        <rdfs:subClassOf rdf:resource="cg_food#Food"/>
+        <rdfs:label xml:lang="en">Cooking Helper</rdfs:label>
+        <rdfs:label xml:lang="fr">Aide Culinaire</rdfs:label>
+    </owl:Class>
+
+    
+    <!-- cg_food#Ingredient -->
+
+    <owl:Class rdf:about="cg_food#Ingredient">
+        <rdfs:subClassOf rdf:resource="cg_food#Food"/>
+        <rdfs:label xml:lang="en">Ingredient</rdfs:label>
+        <rdfs:label xml:lang="fr">Ingrédient</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Starch -->
+
+    <owl:Class rdf:about="cg_food#Starch">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Starch</rdfs:label>
+        <rdfs:label xml:lang="fr">Féculent</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Fruit -->
+
+    <owl:Class rdf:about="cg_food#Fruit">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Fruit</rdfs:label>
+        <rdfs:label xml:lang="fr">Fruit</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Vegetable -->
+
+    <owl:Class rdf:about="cg_food#Vegetable">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Vegetable</rdfs:label>
+        <rdfs:label xml:lang="fr">Légume</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Meat -->
+
+    <owl:Class rdf:about="cg_food#Meat">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Meat</rdfs:label>
+        <rdfs:label xml:lang="fr">Viande</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Egg -->
+
+    <owl:Class rdf:about="cg_food#Egg">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Egg</rdfs:label>
+        <rdfs:label xml:lang="fr">Oeuf</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_food#Seafood -->
+
+    <owl:Class rdf:about="cg_food#Seafood">
+        <rdfs:subClassOf rdf:resource="cg_food#Ingredient"/>
+        <rdfs:label xml:lang="en">Seafood</rdfs:label>
+        <rdfs:label xml:lang="fr">Produit de la mer</rdfs:label>
+    </owl:Class>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+   
+</rdf:RDF>

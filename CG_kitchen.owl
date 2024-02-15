@@ -34,13 +34,15 @@
         <rdfs:label xml:lang="fr">équipement de cuisine</rdfs:label>
     </owl:Class>
 
-     <!-- cg_kitchen#KitchenEquipment -->
+
+    <!-- cg_kitchen#KitchenEquipment -->
 
     <owl:Class rdf:about="cg_kitchen#KitchenWare">
         <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenEquipment"/>
         <rdfs:label xml:lang="en">kitchenware</rdfs:label>
         <rdfs:label xml:lang="fr">matériel de cuisine</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Cutlery -->
 
@@ -50,6 +52,7 @@
         <rdfs:label xml:lang="fr">couvert</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#DinnerWare -->
 
     <owl:Class rdf:about="cg_kitchen#DinnerWare">
@@ -57,6 +60,7 @@
         <rdfs:label xml:lang="en">dinnerware</rdfs:label>
         <rdfs:label xml:lang="fr">équipement de table</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#KitchenKnife -->
 
@@ -66,6 +70,7 @@
         <rdfs:label xml:lang="fr">couteau de cuisine</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#Utensil -->
 
     <owl:Class rdf:about="cg_kitchen#Utensil">
@@ -73,6 +78,7 @@
         <rdfs:label xml:lang="en">utensil</rdfs:label>
         <rdfs:label xml:lang="fr">ustensile</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Spatula -->
 
@@ -82,6 +88,7 @@
         <rdfs:label xml:lang="fr">spatule</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#Ladle -->
 
     <owl:Class rdf:about="cg_kitchen#Ladle">
@@ -89,6 +96,7 @@
         <rdfs:label xml:lang="en">ladle</rdfs:label>
         <rdfs:label xml:lang="fr">louche</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Whisk -->
 
@@ -98,13 +106,15 @@
         <rdfs:label xml:lang="fr">fouet</rdfs:label>
     </owl:Class>
 
-     <!-- cg_kitchen#ChoppingBoard -->
+
+    <!-- cg_kitchen#ChoppingBoard -->
 
     <owl:Class rdf:about="cg_kitchen#ChoppingBoard">
         <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
         <rdfs:label xml:lang="en">chopping board</rdfs:label>
         <rdfs:label xml:lang="fr">planche à découper</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#MixingContainer -->
 
@@ -114,6 +124,7 @@
         <rdfs:label xml:lang="fr">contenant pour mélange</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#BakingWare -->
 
     <owl:Class rdf:about="cg_kitchen#BakingWare">
@@ -121,6 +132,7 @@
         <rdfs:label xml:lang="en">bakingware</rdfs:label>
         <rdfs:label xml:lang="fr">matériel de cuisson</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#BakingTray -->
 
@@ -130,6 +142,7 @@
         <rdfs:label xml:lang="fr">plaque de cuisson</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#BakingWare -->
 
     <owl:Class rdf:about="cg_kitchen#BakingDish">
@@ -137,6 +150,7 @@
         <rdfs:label xml:lang="en">baking dish</rdfs:label>
         <rdfs:label xml:lang="fr">plat de cuisson</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#HouseholdAppliance -->
 
@@ -146,6 +160,7 @@
         <rdfs:label xml:lang="fr">équipement de maison</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#ElectronicAppliance -->
 
     <owl:Class rdf:about="cg_kitchen#ElectronicAppliance">
@@ -153,6 +168,7 @@
         <rdfs:label xml:lang="en">electronic appliance</rdfs:label>
         <rdfs:label xml:lang="fr">électroménager</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Oven -->
 
@@ -162,6 +178,7 @@
         <rdfs:label xml:lang="fr">four</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#Hotplate -->
 
     <owl:Class rdf:about="cg_kitchen#Hotplate">
@@ -169,6 +186,7 @@
         <rdfs:label xml:lang="en">hotplate</rdfs:label>
         <rdfs:label xml:lang="fr">plaque de cuisson</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Dishwasher -->
 
@@ -178,6 +196,7 @@
         <rdfs:label xml:lang="fr">lave vaisselle</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#Refrigerator -->
 
     <owl:Class rdf:about="cg_kitchen#Refrigerator">
@@ -185,6 +204,7 @@
         <rdfs:label xml:lang="en">refrigerator</rdfs:label>
         <rdfs:label xml:lang="fr">réfrigerateur</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Sink -->
 
@@ -194,6 +214,7 @@
         <rdfs:label xml:lang="fr">évier</rdfs:label>
     </owl:Class>
 
+
     <!-- cg_kitchen#Bowl -->
 
     <owl:Class rdf:about="cg_kitchen#Bowl">
@@ -201,6 +222,7 @@
         <rdfs:label xml:lang="en">bowl</rdfs:label>
         <rdfs:label xml:lang="fr">bol</rdfs:label>
     </owl:Class>
+
 
     <!-- cg_kitchen#Mold -->
 
@@ -210,7 +232,8 @@
         <rdfs:label xml:lang="fr">moule</rdfs:label>
     </owl:Class>
 
-     <!-- cg_kitchen#CakeMould -->
+
+    <!-- cg_kitchen#CakeMould -->
 
     <owl:Class rdf:about="cg_kitchen#CakeMold">
         <rdfs:subClassOf rdf:resource="cg_kitchen#Mold"/>

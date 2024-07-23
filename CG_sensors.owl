@@ -1,0 +1,207 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors#"
+     xmlns:cg_sensors="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors#"
+     xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents"/>
+    </owl:Ontology>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- cg_sensors#Camera -->
+
+    <owl:Class rdf:about="cg_sensors#Camera">
+        <rdfs:subClassOf rdf:resource="cg_sensors#Sensor"/>
+        <rdfs:label xml:lang="fr">caméra</rdfs:label>
+        <rdfs:label xml:lang="en">camera</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_sensors#Lidar -->
+
+    <owl:Class rdf:about="cg_sensors#Lidar">
+        <rdfs:subClassOf rdf:resource="cg_sensors#Sensor"/>
+        <rdfs:label xml:lang="fr">lidar</rdfs:label>
+        <rdfs:label xml:lang="en">lidar</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_sensors#Sensor -->
+
+    <owl:Class rdf:about="cg_sensors#Sensor">
+        <rdfs:subClassOf rdf:resource="cg_entities#PhysicalEntity"/>
+        <rdfs:label xml:lang="fr">capteur</rdfs:label>
+        <rdfs:label xml:lang="en">sensor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_sensors#FieldOfView -->
+
+    <owl:Class rdf:about="cg_sensors#FieldOfView">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualQuality"/>
+    </owl:Class>
+
+
+
+      <!-- cg_sensors#FrameId -->
+
+    <owl:Class rdf:about="cg_sensors#FrameId">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualQuality"/>
+    </owl:Class>
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+    <!-- cg_sensors#hasSensor -->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#hasSensor">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#hasPhysicalQuality"/> <!-- TODO Use hasSubpart-->
+        <rdfs:domain rdf:resource="cg_agents#PhysicalEntity"/>
+        <rdfs:range rdf:resource="cg_sensors#Sensor"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- cg_sensors#isSensorOf -->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#isSensorOf">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#hasPhysicalQuality"/> <!-- TODO Use hasSubpart-->
+        <owl:inverseOf rdf:resource="cg_sensors#hasSensor"/>
+        <rdfs:domain rdf:resource="cg_agents#Sensor"/>
+        <rdfs:range rdf:resource="cg_sensors#PhysicalEntity"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- cg_sensors#hasFieldOfView -->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#hasFieldOfView">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/> <!-- TODO change into sensor-->
+        <rdfs:range rdf:resource="cg_sensors#FieldOfView"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- cg_sensors#isFieldOfViewOf -->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#isFieldOfViewOf">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_sensors#hasFieldOfView"/>
+        <rdfs:domain rdf:resource="cg_sensors#FieldOfView"/>
+        <rdfs:range rdf:resource="cg_entities#Entity"/> <!-- TODO change into sensor-->
+    </owl:ObjectProperty>
+
+
+
+    <!-- cg_sensors#hasFrameId --> <!-- TODO Move to more generic file -->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#hasFrameId">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:range rdf:datatype="cg_sensors#FrameId"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- cg_sensors#isFrameIdOf --> <!-- TODO Remove-->
+
+    <owl:ObjectProperty rdf:about="cg_sensors#isFrameIdOf">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_agents#hasFrameId"/>
+        <rdfs:domain rdf:resource="cg_sensors#FrameId"/>
+        <rdfs:range rdf:datatype="cg_entities#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+   <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- cg_sensors#isStatic --> <!-- TODO Move to more generic file -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#isStatic">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#hasPhysicalQuality"/>
+        <rdfs:domain rdf:resource="cg_entities#Entity"/>
+        <rdfs:range rdf:datatype="http://www.w3.org/2002/07/owl#bool"/>
+    </owl:DatatypeProperty>
+
+    
+    <!-- cg_sensors#fovHasValue -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#fovHasValue">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#qualityHasValue"/>
+        <rdfs:domain rdf:resource="cg_sensors#FieldOfView"/>
+    </owl:DatatypeProperty>
+
+
+    
+    <!-- cg_sensors#fovHasHeight -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#fovHasHeight">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#fovHasValue"/>
+    </owl:DatatypeProperty>
+
+    
+
+    <!-- cg_sensors#fovHasWidth -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#fovHasWidth">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#fovHasValue"/>
+    </owl:DatatypeProperty>
+
+    
+
+    <!-- cg_sensors#fovHasClipNear -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#fovHasClipNear">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#fovHasValue"/>
+    </owl:DatatypeProperty>
+
+    
+
+    <!-- cg_sensors#fovHasClipFar -->
+
+    <owl:DatatypeProperty rdf:about="cg_sensors#fovHasClipFar">
+        <rdfs:subPropertyOf rdf:resource="cg_sensors#fovHasValue"/>
+    </owl:DatatypeProperty>  
+
+
+</rdf:RDF>

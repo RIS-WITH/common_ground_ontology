@@ -4,6 +4,7 @@
      xmlns:cg_agents="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents#"
      xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
      xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:cg_sensors="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors#"
      xmlns:onto="ontologenius"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
@@ -13,6 +14,7 @@
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_agents">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_sensors"/>
     </owl:Ontology>
     
 
@@ -24,27 +26,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-    
-
-
-    <!-- cg_agents#hasFieldOfView -->
-
-    <owl:ObjectProperty rdf:about="cg_agents#hasFieldOfView">
-        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
-        <rdfs:domain rdf:resource="cg_agents#Agent"/>
-        <rdfs:range rdf:resource="cg_agents#FieldOfView"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- cg_agents#isFieldOfViewOf -->
-
-    <owl:ObjectProperty rdf:about="cg_agents#isFieldOfViewOf">
-        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
-        <owl:inverseOf rdf:resource="cg_agents#hasFieldOfView"/>
-        <rdfs:domain rdf:resource="cg_agents#FieldOfView"/>
-        <rdfs:range rdf:resource="cg_agents#Agent"/>
-    </owl:ObjectProperty>
     
 
 
@@ -96,6 +77,15 @@
     
 
 
+    <!-- cg_agents#hasEye -->
+
+    <owl:ObjectProperty rdf:about="cg_agents#hasEye">
+        <rdfs:subPropertyOf rdf:resource="cg_agents#hasBodyPart"/>
+        <rdfs:range rdf:resource="cg_agents#Eye"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- cg_agents#hasLeftHand -->
 
     <owl:ObjectProperty rdf:about="cg_agents#hasLeftHand">
@@ -121,52 +111,6 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
-
-    
-
-
-    <!-- cg_agents#fovHasValue -->
-
-    <owl:DatatypeProperty rdf:about="cg_agents#fovHasValue">
-        <rdfs:subPropertyOf rdf:resource="cg_entities#qualityHasValue"/>
-        <rdfs:domain rdf:resource="cg_agents#FieldOfView"/>
-    </owl:DatatypeProperty>
-
-    
-
-
-    <!-- cg_agents#fovHasHeight -->
-
-    <owl:DatatypeProperty rdf:about="cg_agents#fovHasHeight">
-        <rdfs:subPropertyOf rdf:resource="cg_agents#fovHasValue"/>
-    </owl:DatatypeProperty>
-
-    
-
-
-    <!-- cg_agents#fovHasWidth -->
-
-    <owl:DatatypeProperty rdf:about="cg_agents#fovHasWidth">
-        <rdfs:subPropertyOf rdf:resource="cg_agents#fovHasValue"/>
-    </owl:DatatypeProperty>
-
-    
-
-
-    <!-- cg_agents#fovHasClipNear -->
-
-    <owl:DatatypeProperty rdf:about="cg_agents#fovHasClipNear">
-        <rdfs:subPropertyOf rdf:resource="cg_agents#fovHasValue"/>
-    </owl:DatatypeProperty>
-
-    
-
-
-    <!-- cg_agents#fovHasClipFar -->
-
-    <owl:DatatypeProperty rdf:about="cg_agents#fovHasClipFar">
-        <rdfs:subPropertyOf rdf:resource="cg_agents#fovHasValue"/>
-    </owl:DatatypeProperty>
     
 
 
@@ -187,14 +131,6 @@
         <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <rdfs:label xml:lang="en">agent</rdfs:label>
         <rdfs:label xml:lang="fr">agent</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- cg_agents#FieldOfView -->
-
-    <owl:Class rdf:about="cg_agents#FieldOfView">
-        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualQuality"/>
     </owl:Class>
     
 
@@ -251,6 +187,7 @@
 
     <owl:Class rdf:about="cg_agents#Head">
         <rdfs:subClassOf rdf:resource="cg_agents#BodyPart"/>
+        <cg_sensors:hasSensor rdf:resource="ris_agents#human_eye"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/humans/head.obj</cg_entities:hasMesh>
     </owl:Class>
     

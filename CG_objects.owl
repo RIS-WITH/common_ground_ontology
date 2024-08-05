@@ -138,7 +138,7 @@
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
         <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/mug.obj</cg_entities:hasMesh>
-        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/mug.png</cg_entities:hasTexture>
+        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/textures/mug.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">mug</rdfs:label>
         <rdfs:label xml:lang="fr">tasse</rdfs:label>
     </owl:Class>
@@ -163,7 +163,7 @@
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
         <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/paper_bin.obj</cg_entities:hasMesh>
-        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/paper_bin.png</cg_entities:hasTexture>
+        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/textures/paper_bin.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">paper bin</rdfs:label>
         <rdfs:label xml:lang="fr">poubelle</rdfs:label>
     </owl:Class>
@@ -176,7 +176,7 @@
         <rdfs:subClassOf rdf:resource="cg_objects#Pickable"/>
         <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pen.obj</cg_entities:hasMesh>
-        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/pen.png</cg_entities:hasTexture>
+        <cg_entities:hasTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/textures/pen.png</cg_entities:hasTexture>
         <rdfs:label xml:lang="en">pen</rdfs:label>
         <rdfs:label xml:lang="fr">stylo</rdfs:label>
     </owl:Class>

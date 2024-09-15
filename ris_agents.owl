@@ -166,6 +166,25 @@
     
 
 
+    <!-- ris_agents#CameraTop_optical_frame -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#CameraTop_optical_frame">
+        <rdf:type rdf:resource="cg_agents#FrameId"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ris_agents#realsense -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#realsense">
+        <rdf:type rdf:resource="cg_sensors#Sensor"/>
+        <cg_sensors:hasFieldOfView rdf:resource="ris_agents#realsense_fov"/>
+        <cg_sensors:hasFrameId rdf:resource="ris_agents#CameraTop_optical_frame"/>
+        <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
+    </owl:NamedIndividual>
+    
+
+
     <!-- ris_agents#base_link -->
 
     <owl:NamedIndividual rdf:about="ris_agents#base_link">
@@ -174,10 +193,11 @@
     
 
 
-    <!-- ris_agents#CameraTop_optical_frame -->
+    <!-- ris_agents#CameraTop_frame -->
 
-    <owl:NamedIndividual rdf:about="ris_agents#CameraTop_optical_frame">
+    <owl:NamedIndividual rdf:about="ris_agents#CameraTop_frame">
         <rdf:type rdf:resource="cg_agents#Head"/>
+        <cg_sensors:hasSensor rdf:resource="ris_agents#realsense"/>
     </owl:NamedIndividual>
     
 
@@ -203,10 +223,9 @@
     <owl:NamedIndividual rdf:about="ris_agents#pepper">
         <rdf:type rdf:resource="cg_agents#Robot"/>
         <cg_agents:hasBase rdf:resource="ris_agents#base_link"/>
-        <cg_agents:hasHead rdf:resource="ris_agents#CameraTop_optical_frame"/>
+        <cg_agents:hasHead rdf:resource="ris_agents#CameraTop_frame"/>
         <cg_agents:hasRightHand rdf:resource="ris_agents#r_gripper"/>
         <cg_agents:hasLeftHand rdf:resource="ris_agents#l_gripper"/>
-        <cg_sensors:hasFieldOfView rdf:resource="ris_agents#realsense_fov"/>
     </owl:NamedIndividual>
     
 

@@ -173,7 +173,7 @@
 
     <owl:Class rdf:about="common_ground#Figure">
         <rdfs:subClassOf rdf:resource="common_ground#GraphicalEntity"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <!--rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/-->
         <rdfs:label xml:lang="en">figure</rdfs:label>
         <rdfs:label xml:lang="fr">forme</rdfs:label>
     </owl:Class>

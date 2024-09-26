@@ -71,6 +71,18 @@
     
 
 
+    <!-- ris_agents#pr2_arm_fov -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#pr2_arm_fov">
+        <rdf:type rdf:resource="cg_sensors#FieldOfView"/>
+        <cg_sensors:fovHasClipNear rdf:datatype="http://www.w3.org/2002/07/owl#real">0.1</cg_sensors:fovHasClipNear>
+        <cg_sensors:fovHasClipFar rdf:datatype="http://www.w3.org/2002/07/owl#real">1.5</cg_sensors:fovHasClipFar>
+        <cg_sensors:fovHasHeight rdf:datatype="http://www.w3.org/2002/07/owl#real">33</cg_sensors:fovHasHeight>
+        <cg_sensors:fovHasWidth rdf:datatype="http://www.w3.org/2002/07/owl#real">40</cg_sensors:fovHasWidth>
+    </owl:NamedIndividual>
+    
+
+
     <!-- ris_agents#human_eye_fov -->
 
     <owl:NamedIndividual rdf:about="ris_agents#human_eye_fov">
@@ -126,6 +138,28 @@
         <cg_sensors:hasFrameId rdf:resource="ris_agents#head_mount_kinect2_rgb_optical_frame"/>
         <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
     </owl:NamedIndividual>
+
+
+
+    <!-- ris_agents#pr2_larm_cam -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#pr2_larm_cam">
+        <rdf:type rdf:resource="cg_sensors#Sensor"/>
+        <cg_sensors:hasFieldOfView rdf:resource="ris_agents#pr2_arm_fov"/>
+        <cg_sensors:hasFrameId rdf:resource="ris_agents#l_forearm_cam_optical_frame"/>
+        <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ris_agents#pr2_rarm_cam -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#pr2_rarm_cam">
+        <rdf:type rdf:resource="cg_sensors#Sensor"/>
+        <cg_sensors:hasFieldOfView rdf:resource="ris_agents#pr2_arm_fov"/>
+        <cg_sensors:hasFrameId rdf:resource="ris_agents#r_forearm_cam_optical_frame"/>
+        <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
+    </owl:NamedIndividual>
     
 
 
@@ -142,6 +176,7 @@
 
     <owl:NamedIndividual rdf:about="ris_agents#l_gripper_tool_frame">
         <rdf:type rdf:resource="cg_agents#Hand"/>
+        <cg_sensors:hasSensor rdf:resource="ris_agents#pr2_larm_cam"/>
     </owl:NamedIndividual>
     
 
@@ -150,6 +185,7 @@
 
     <owl:NamedIndividual rdf:about="ris_agents#r_gripper_tool_frame">
         <rdf:type rdf:resource="cg_agents#Hand"/>
+        <cg_sensors:hasSensor rdf:resource="ris_agents#pr2_rarm_cam"/>
     </owl:NamedIndividual>
     
 

@@ -168,7 +168,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="cg_actions#Task"/>
-            <rdf:Description rdf:about="cg_actions#ACtion"/>
+            <rdf:Description rdf:about="cg_actions#Action"/>
         </owl:members>
     </rdf:Description>
 

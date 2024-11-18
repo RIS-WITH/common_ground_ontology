@@ -368,7 +368,7 @@
 
     <owl:Class rdf:about="cg_language#MaleSingularDemonstrativePronoun">
         <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativePronoun"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <!--rdfs:label xml:lang="fr">celui</rdfs:label-->
         <rdfs:label xml:lang="fr">celui-ci</rdfs:label>
         <rdfs:label xml:lang="fr">celui-la</rdfs:label>
@@ -394,7 +394,7 @@
 
     <owl:Class rdf:about="cg_language#MalePluralDemonstrativePronoun">
         <rdfs:subClassOf rdf:resource="cg_language#PluralDemonstrativePronoun"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <rdfs:label xml:lang="fr">ceux</rdfs:label>
         <rdfs:label xml:lang="fr">ceux-ci</rdfs:label>
         <rdfs:label xml:lang="fr">ceux-la</rdfs:label>
@@ -507,7 +507,7 @@
 
     <owl:Class rdf:about="cg_language#MaleSingularDefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#SingularDefinedArticle"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <rdfs:label xml:lang="fr">le</rdfs:label>
     </owl:Class>
 
@@ -524,11 +524,11 @@
 
 
 
-    <!-- cg_language#MalePluralrDefinedArticle -->
+    <!-- cg_language#MalePluralDefinedArticle -->
 
-    <owl:Class rdf:about="cg_language#MalePluralrDefinedArticle">
+    <owl:Class rdf:about="cg_language#MalePluralDefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#PluralDefinedArticle"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
     </owl:Class>
 
 
@@ -616,7 +616,7 @@
 
     <owl:Class rdf:about="cg_language#MaleSingularUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#SingularUndefinedArticle"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <rdfs:label xml:lang="fr">un</rdfs:label>
     </owl:Class>
 
@@ -637,7 +637,7 @@
 
     <owl:Class rdf:about="cg_language#MalePluralUndefinedArticle">
         <rdfs:subClassOf rdf:resource="cg_language#PluralUndefinedArticle"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
     </owl:Class>
 
 
@@ -697,7 +697,7 @@
 
     <owl:Class rdf:about="cg_language#MaleSingularDemonstrativeDeterminant">
         <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativeDeterminant"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <rdfs:label xml:lang="fr">ce</rdfs:label>
     </owl:Class>
 
@@ -708,7 +708,7 @@
 
     <owl:Class rdf:about="cg_language#VowelMaleSingularDemonstrativeDeterminant">
         <rdfs:subClassOf rdf:resource="cg_language#SingularDemonstrativeDeterminant"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
         <rdfs:label xml:lang="fr">cet</rdfs:label>
     </owl:Class>
 
@@ -729,7 +729,7 @@
 
     <owl:Class rdf:about="cg_language#MalePluralDemonstrativeDeterminant">
         <rdfs:subClassOf rdf:resource="cg_language#PluralDemonstrativeDeterminant"/>
-        <rdfs:subClassOf rdf:resource="cg_language#FemaleGender"/>
+        <rdfs:subClassOf rdf:resource="cg_language#MaleGender"/>
     </owl:Class>
 
 

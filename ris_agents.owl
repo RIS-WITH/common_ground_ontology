@@ -71,6 +71,18 @@
     
 
 
+    <!-- ris_agents#zedx_fov -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#zedx_fov">
+        <rdf:type rdf:resource="cg_sensors#FieldOfView"/>
+        <cg_sensors:fovHasClipNear rdf:datatype="http://www.w3.org/2002/07/owl#real">0.1</cg_sensors:fovHasClipNear>
+        <cg_sensors:fovHasClipFar rdf:datatype="http://www.w3.org/2002/07/owl#real">6</cg_sensors:fovHasClipFar>
+        <cg_sensors:fovHasHeight rdf:datatype="http://www.w3.org/2002/07/owl#real">72</cg_sensors:fovHasHeight>
+        <cg_sensors:fovHasWidth rdf:datatype="http://www.w3.org/2002/07/owl#real">105</cg_sensors:fovHasWidth>
+    </owl:NamedIndividual>
+    
+
+
     <!-- ris_agents#pr2_arm_fov -->
 
     <owl:NamedIndividual rdf:about="ris_agents#pr2_arm_fov">
@@ -138,6 +150,25 @@
         <cg_sensors:hasFrameId rdf:resource="ris_agents#head_mount_kinect2_rgb_optical_frame"/>
         <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
     </owl:NamedIndividual>
+    
+    
+
+    <!-- ris_agents#zedx_left_camera_optical_frame -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#zedx_left_camera_optical_frame">
+        <rdf:type rdf:resource="cg_sensors#FrameId"/>
+    </owl:NamedIndividual>
+
+
+
+    <!-- ris_agents#zedx -->
+
+    <owl:NamedIndividual rdf:about="ris_agents#zedx">
+        <rdf:type rdf:resource="cg_sensors#Sensor"/>
+        <cg_sensors:hasFieldOfView rdf:resource="ris_agents#zedx_fov"/>
+        <cg_sensors:hasFrameId rdf:resource="ris_agents#zedx_left_camera_optical_frame"/>
+        <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
+    </owl:NamedIndividual>
 
 
 
@@ -167,7 +198,7 @@
 
     <owl:NamedIndividual rdf:about="ris_agents#head_plate_frame">
         <rdf:type rdf:resource="cg_agents#Head"/>
-        <cg_sensors:hasSensor rdf:resource="ris_agents#kinect2"/>
+        <cg_sensors:hasSensor rdf:resource="ris_agents#zedx"/>
     </owl:NamedIndividual>
 
 

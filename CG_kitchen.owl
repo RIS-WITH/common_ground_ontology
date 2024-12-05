@@ -233,7 +233,7 @@
     </owl:Class>
 
 
-    <!-- cg_kitchen#CakeMould -->
+     <!-- cg_kitchen#CakeMold -->
 
     <owl:Class rdf:about="cg_kitchen#CakeMold">
         <rdfs:subClassOf rdf:resource="cg_kitchen#Mold"/>

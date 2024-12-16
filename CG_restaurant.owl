@@ -1,0 +1,164 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/Cg_restaurant#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/Cg_restaurant#"
+     xmlns:cg_restaurant="https://github.com/RIS-WITH/common_ground_ontology/blob/master/Cg_restaurant#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:cg_area="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_area#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_context="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_context#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/Cg_restaurant">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+
+
+     <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- cg_restaurant#Kitchen -->
+
+    <owl:Class rdf:about="cg_restaurant#Kitchen">
+        <rdfs:subClassOf rdf:resource="cg_area#Room"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#DinningRoom -->
+
+    <owl:Class rdf:about="cg_restaurant#DinningRoom">
+        <rdfs:subClassOf rdf:resource="cg_area#Room"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#Order -->
+
+    <owl:Class rdf:about="cg_restaurant#Order">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualEntity"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#Waiter -->
+
+    <owl:Class rdf:about="cg_restaurant#Waiter">
+        <rdfs:subClassOf rdf:resource="cg_context#Role"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#Cook -->
+
+    <owl:Class rdf:about="cg_restaurant#Cook">
+        <rdfs:subClassOf rdf:resource="cg_context#Role"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#Chef -->
+
+    <owl:Class rdf:about="cg_restaurant#Chef">
+        <rdfs:subClassOf rdf:resource="cg_context#Role"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#Client -->
+
+    <owl:Class rdf:about="cg_restaurant#Client">
+        <rdfs:subClassOf rdf:resource="cg_context#Role"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#RestaurantTable -->
+
+    <owl:Class rdf:about="cg_restaurant#RestaurantTable">
+        <rdfs:subClassOf rdf:resource="cg_objects#Table"/>
+    </owl:Class>
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //                                                                                   //
+    // Object properties                                                                 //
+    //                                                                                   //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+    <!-- cg_restaurant#hasOrder -->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#hasOrder">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Client"/>
+        <rdfs:range rdf:resource="cg_restaurant#Order"/>
+    </owl:ObjectProperty>
+
+
+    <!-- cg_restaurant#hasTableOrder -->
+    
+    <owl:ObjectProperty rdf:about="cg_restaurant#hasTableOrder">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_restaurant#RestaurantTable"/>
+        <rdfs:range rdf:resource="cg_restaurant#Order"/>
+    </owl:ObjectProperty>
+
+
+    <!-- cg_restaurant#hasDish-->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#hasDishes">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Order"/>
+        <rdfs:range rdf:resource="cg_objects#Dish"/>
+    </owl:ObjectProperty>
+
+
+    <!-- cg_restaurant#isAtTable -->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#isAtTable">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Client"/>
+        <rdfs:range rdf:resource="cg_restaurant#RestaurantTable"/>
+    </owl:ObjectProperty>
+
+    
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+     
+    <!-- cg_restaurant#orderNumber -->
+
+    <owl:DatatypeProperty rdf:about="cg_restaurant#orderNumber">
+        <rdfs:domain rdf:resource="cg_restaurant#Order"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+    <!-- cg_restaurant#hasTableCapacity -->
+
+    <owl:DatatypeProperty rdf:about="cg_restaurant#hasTableCapacity">
+        <rdfs:domain rdf:resource="cg_restaurant#RestaurantTable"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+
+
+
+
+
+
+   
+</rdf:RDF>

@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_dishes#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_dishes#"
+     xmlns:cg_dishes="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_dishes#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:cg_food="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_food#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_dishes">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+    
+
+     <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- cg_dishes#Dish -->
+
+    <owl:Class rdf:about="cg_dishes#Dish">
+        <rdfs:subClassOf rdf:resource="cg_food#Food"/>
+    </owl:Class>
+    
+    
+    <!-- cg_dishes#Appetizers-->
+
+    <owl:Class rdf:about="cg_dishes#Appetizers">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
+    </owl:Class>
+
+
+    <!-- cg_dishes#Starter -->
+
+    <owl:Class rdf:about="cg_dishes#Starter">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
+    </owl:Class>
+
+
+
+    <!-- cg_dishes#MainCourses -->
+
+    <owl:Class rdf:about="cg_dishes#MainCourses">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
+    </owl:Class>
+
+
+    <!-- cg_dishes#SideDishes -->
+
+    <owl:Class rdf:about="cg_dishes#SideDishes">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>    
+    </owl:Class>
+
+
+    <!-- cg_dishes#Desserts -->
+
+    <owl:Class rdf:about="cg_dishes#Desserts">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
+    </owl:Class>
+
+
+    <!-- cg_dishes#Drinks -->
+
+    <owl:Class rdf:about="cg_dishes#Drinks">
+        <rdfs:subClassOf rdf:resource="cg_food#Food"/>
+    </owl:Class>
+
+
+    <!-- cg_dishes#Beverages -->
+
+    <owl:Class rdf:about="cg_dishes#Beverages">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
+    </owl:Class>
+
+
+    <!-- cg_dishes#Tea -->
+
+    <owl:Class rdf:about="cg_dishes#Tea">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Beverages"/>
+    </owl:Class>
+
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //                                                                                   //
+    // Object properties                                                                 //
+    //                                                                                   //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+     
+
+
+
+
+
+
+
+   
+</rdf:RDF>

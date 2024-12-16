@@ -71,11 +71,11 @@
     </owl:Class>
 
 
-    <!-- cg_kitchen#Utensil -->
+    <!-- cg_kitchen#Ustensil -->
 
-    <owl:Class rdf:about="cg_kitchen#Utensil">
+    <owl:Class rdf:about="cg_kitchen#Ustensil">
         <rdfs:subClassOf rdf:resource="cg_kitchen#KitchenWare"/>
-        <rdfs:label xml:lang="en">utensil</rdfs:label>
+        <rdfs:label xml:lang="en">ustensil</rdfs:label>
         <rdfs:label xml:lang="fr">ustensile</rdfs:label>
     </owl:Class>
 
@@ -83,7 +83,7 @@
     <!-- cg_kitchen#Spatula -->
 
     <owl:Class rdf:about="cg_kitchen#Spatula">
-        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Ustensil"/>
         <rdfs:label xml:lang="en">spatula</rdfs:label>
         <rdfs:label xml:lang="fr">spatule</rdfs:label>
     </owl:Class>
@@ -92,7 +92,7 @@
     <!-- cg_kitchen#Ladle -->
 
     <owl:Class rdf:about="cg_kitchen#Ladle">
-        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Ustensil"/>
         <rdfs:label xml:lang="en">ladle</rdfs:label>
         <rdfs:label xml:lang="fr">louche</rdfs:label>
     </owl:Class>
@@ -101,7 +101,7 @@
     <!-- cg_kitchen#Whisk -->
 
     <owl:Class rdf:about="cg_kitchen#Whisk">
-        <rdfs:subClassOf rdf:resource="cg_kitchen#Utensil"/>
+        <rdfs:subClassOf rdf:resource="cg_kitchen#Ustensil"/>
         <rdfs:label xml:lang="en">whisk</rdfs:label>
         <rdfs:label xml:lang="fr">fouet</rdfs:label>
     </owl:Class>

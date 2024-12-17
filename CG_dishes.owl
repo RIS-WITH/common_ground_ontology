@@ -26,12 +26,20 @@
      -->
 
 
+
+
     <!-- cg_dishes#Dish -->
 
     <owl:Class rdf:about="cg_dishes#Dish">
         <rdfs:subClassOf rdf:resource="cg_food#Food"/>
     </owl:Class>
     
+
+    <!-- cg_dishes#Menu -->
+
+    <owl:Class rdf:about="cg_dishes#Menu">
+        <rdfs:subClassOf rdf:resource="cg_entities#ConceptualEntity"/>
+    </owl:Class>
     
     <!-- cg_dishes#Appetizers-->
 
@@ -82,12 +90,22 @@
         <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
     </owl:Class>
 
+    
+    <!-- cg_dishes#AlcoholicDrinks	 -->
 
-    <!-- cg_dishes#Tea -->
-
-    <owl:Class rdf:about="cg_dishes#Tea">
-        <rdfs:subClassOf rdf:resource="cg_dishes#Beverages"/>
+    <owl:Class rdf:about="cg_dishes#AlcoholicDrinks">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
     </owl:Class>
+
+
+    <!-- cg_dishes#HotDrinks -->
+
+    <owl:Class rdf:about="cg_dishes#HotDrinks">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
+    </owl:Class>
+
+
+
 
 
 
@@ -99,6 +117,17 @@
     //                                                                                   //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+    <!-- cg_dishes#hasDishes -->
+
+    <owl:ObjectProperty rdf:about="cg_dishes#hasDishes">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_dishes#Menu"/>
+        <rdfs:range rdf:resource="cg_dishes#Dish"/>
+        <!-- <rdfs:range rdf:resource="cg_dishes#Drinks"/> -->
+    </owl:ObjectProperty>
+
+
 
 
     

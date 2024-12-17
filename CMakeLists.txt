@@ -30,5 +30,7 @@ install(FILES
   CG_sensors.owl
   CG_verbs.owl
   ris_agents.owl
+  CG_restaurant.owl
+  CG_dishes.owl
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

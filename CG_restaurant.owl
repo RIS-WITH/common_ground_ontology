@@ -42,6 +42,34 @@
     </owl:Class>
 
 
+    <!-- cg_restaurant#WelcomingArea -->
+
+    <owl:Class rdf:about="cg_restaurant#WelcomingArea">
+        <rdfs:subClassOf rdf:resource="cg_area#Area"/>
+    </owl:Class>
+
+    
+    <!-- cg_restaurant#WaitingArea -->
+
+    <owl:Class rdf:about="cg_restaurant#WaitingArea">
+        <rdfs:subClassOf rdf:resource="cg_area#Area"/>
+    </owl:Class>
+
+
+    <!-- cg_restaurant#PayementArea -->
+
+    <owl:Class rdf:about="cg_restaurant#PayementArea">
+        <rdfs:subClassOf rdf:resource="cg_area#Area"/>
+    </owl:Class>
+
+    
+    <!-- cg_restaurant#HatchArea -->
+
+    <owl:Class rdf:about="cg_restaurant#HatchArea">
+        <rdfs:subClassOf rdf:resource="cg_area#Area"/>
+    </owl:Class>
+
+
     <!-- cg_restaurant#Order -->
 
     <owl:Class rdf:about="cg_restaurant#Order">

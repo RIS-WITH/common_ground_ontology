@@ -129,22 +129,53 @@
         <rdfs:range rdf:resource="cg_restaurant#Order"/>
     </owl:ObjectProperty>
 
+    <!-- cg_restaurant#isOrderOf -->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#isOrderOf">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_restaurant#hasOrder"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Order"/>
+        <rdfs:range rdf:resource="cg_restaurant#Client"/>
+    </owl:ObjectProperty>
+
 
     <!-- cg_restaurant#hasTableOrder -->
     
     <owl:ObjectProperty rdf:about="cg_restaurant#hasTableOrder">
         <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:propertyChainAxiom rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_restaurant#hasClient"/>
+            <rdf:Description rdf:about="cg_restaurant#hasOrder"/>
+        </owl:propertyChainAxiom>
         <rdfs:domain rdf:resource="cg_restaurant#RestaurantTable"/>
         <rdfs:range rdf:resource="cg_restaurant#Order"/>
+    </owl:ObjectProperty>
+
+    <!-- cg_restaurant#isTableOrderOf -->
+    
+    <owl:ObjectProperty rdf:about="cg_restaurant#isTableOrderOf">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_restaurant#hasTableOrder"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Order"/>
+        <rdfs:range rdf:resource="cg_restaurant#RestaurantTable"/>
     </owl:ObjectProperty>
 
 
     <!-- cg_restaurant#hasDish-->
 
-    <owl:ObjectProperty rdf:about="cg_restaurant#hasDishes">
+    <owl:ObjectProperty rdf:about="cg_restaurant#hasDish">
         <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
         <rdfs:domain rdf:resource="cg_restaurant#Order"/>
         <rdfs:range rdf:resource="cg_objects#Dish"/>
+    </owl:ObjectProperty>
+
+    <!-- cg_restaurant#isDishOf-->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#isDishOf">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_restaurant#hasDish"/>
+        <rdfs:domain rdf:resource="cg_restaurant#Dish"/>
+        <rdfs:range rdf:resource="cg_objects#Order"/>
     </owl:ObjectProperty>
 
 
@@ -154,6 +185,15 @@
         <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
         <rdfs:domain rdf:resource="cg_restaurant#Client"/>
         <rdfs:range rdf:resource="cg_restaurant#RestaurantTable"/>
+    </owl:ObjectProperty>
+
+     <!-- cg_restaurant#hasClient -->
+
+    <owl:ObjectProperty rdf:about="cg_restaurant#hasClient">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <owl:inverseOf rdf:resource="cg_restaurant#isAtTable"/>
+        <rdfs:domain rdf:resource="cg_restaurant#RestaurantTable"/>
+        <rdfs:range rdf:resource="cg_restaurant#Client"/>
     </owl:ObjectProperty>
 
     

@@ -41,9 +41,9 @@
         <rdfs:subClassOf rdf:resource="cg_entities#ConceptualEntity"/>
     </owl:Class>
     
-    <!-- cg_dishes#Appetizers-->
+    <!-- cg_dishes#Appetizer-->
 
-    <owl:Class rdf:about="cg_dishes#Appetizers">
+    <owl:Class rdf:about="cg_dishes#Appetizer">
         <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
     </owl:Class>
 
@@ -56,52 +56,52 @@
 
 
 
-    <!-- cg_dishes#MainCourses -->
+    <!-- cg_dishes#MainCourse -->
 
-    <owl:Class rdf:about="cg_dishes#MainCourses">
+    <owl:Class rdf:about="cg_dishes#MainCourse">
         <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
     </owl:Class>
 
 
-    <!-- cg_dishes#SideDishes -->
+    <!-- cg_dishes#SideDish -->
 
-    <owl:Class rdf:about="cg_dishes#SideDishes">
+    <owl:Class rdf:about="cg_dishes#SideDish">
         <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>    
     </owl:Class>
 
 
-    <!-- cg_dishes#Desserts -->
+    <!-- cg_dishes#Dessert -->
 
-    <owl:Class rdf:about="cg_dishes#Desserts">
+    <owl:Class rdf:about="cg_dishes#Dessert">
         <rdfs:subClassOf rdf:resource="cg_dishes#Dish"/>
     </owl:Class>
 
 
-    <!-- cg_dishes#Drinks -->
+    <!-- cg_dishes#Drink -->
 
-    <owl:Class rdf:about="cg_dishes#Drinks">
+    <owl:Class rdf:about="cg_dishes#Drink">
         <rdfs:subClassOf rdf:resource="cg_food#Food"/>
     </owl:Class>
 
 
-    <!-- cg_dishes#Beverages -->
+    <!-- cg_dishes#Beverage -->
 
-    <owl:Class rdf:about="cg_dishes#Beverages">
-        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
+    <owl:Class rdf:about="cg_dishes#Beverage">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drink"/>
     </owl:Class>
 
     
-    <!-- cg_dishes#AlcoholicDrinks	 -->
+    <!-- cg_dishes#AlcoholicDrink	 -->
 
-    <owl:Class rdf:about="cg_dishes#AlcoholicDrinks">
-        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
+    <owl:Class rdf:about="cg_dishes#AlcoholicDrink">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drink"/>
     </owl:Class>
 
 
-    <!-- cg_dishes#HotDrinks -->
+    <!-- cg_dishes#HotDrink -->
 
-    <owl:Class rdf:about="cg_dishes#HotDrinks">
-        <rdfs:subClassOf rdf:resource="cg_dishes#Drinks"/>
+    <owl:Class rdf:about="cg_dishes#HotDrink">
+        <rdfs:subClassOf rdf:resource="cg_dishes#Drink"/>
     </owl:Class>
 
 
@@ -118,13 +118,13 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <!-- cg_dishes#hasDishes -->
+    <!-- cg_dishes#hasDish -->
 
-    <owl:ObjectProperty rdf:about="cg_dishes#hasDishes">
+    <owl:ObjectProperty rdf:about="cg_dishes#hasDish">
         <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
         <rdfs:domain rdf:resource="cg_dishes#Menu"/>
         <rdfs:range rdf:resource="cg_dishes#Dish"/>
-        <!-- <rdfs:range rdf:resource="cg_dishes#Drinks"/> -->
+        <!-- <rdfs:range rdf:resource="cg_dishes#Drink"/> -->
     </owl:ObjectProperty>
 
 

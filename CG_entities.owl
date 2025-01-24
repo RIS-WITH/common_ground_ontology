@@ -212,6 +212,30 @@
     
 
 
+    <!-- cg_entities#hasDiffuseTexture -->
+
+    <owl:DatatypeProperty rdf:about="cg_entities#hasDiffuseTexture">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasTexture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- cg_entities#hasSpecularTexture -->
+
+    <owl:DatatypeProperty rdf:about="cg_entities#hasSpecularTexture">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasTexture"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- cg_entities#hasNormalTexture -->
+
+    <owl:DatatypeProperty rdf:about="cg_entities#hasNormalTexture">
+        <rdfs:subPropertyOf rdf:resource="cg_entities#hasTexture"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- cg_entities#hasUnreallMesh -->
 
     <owl:DatatypeProperty rdf:about="cg_entities#hasUnreallMesh">

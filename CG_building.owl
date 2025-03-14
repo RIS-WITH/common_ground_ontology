@@ -84,6 +84,14 @@
     
 
 
+    <!-- cg_building#Roof -->
+
+    <owl:Class rdf:about="cg_building#Roof">
+        <rdfs:subClassOf rdf:resource="cg_building#BuildingPart"/>
+    </owl:Class>
+    
+
+
     <!-- cg_building#Floor -->
 
     <owl:Class rdf:about="cg_building#Floor">

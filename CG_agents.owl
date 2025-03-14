@@ -187,7 +187,7 @@
 
     <owl:Class rdf:about="cg_agents#Head">
         <rdfs:subClassOf rdf:resource="cg_agents#BodyPart"/>
-        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/humans/head.obj</cg_entities:hasMesh>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/humans/remy.dae</cg_entities:hasMesh>
     </owl:Class>
     
 

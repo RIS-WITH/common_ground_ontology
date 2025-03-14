@@ -187,7 +187,17 @@
 
     <owl:Class rdf:about="cg_agents#Head">
         <rdfs:subClassOf rdf:resource="cg_agents#BodyPart"/>
+    </owl:Class>
+    
+
+
+    <!-- cg_agents#HumanHead -->
+
+    <owl:Class rdf:about="cg_agents#HumanHead">
+        <rdfs:subClassOf rdf:resource="cg_agents#Head"/>
         <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/humans/remy.dae</cg_entities:hasMesh>
+        <cg_entities:hasSpecularTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/textures/Remy_Body_Gloss.png</cg_entities:hasSpecularTexture>
+        <cg_entities:hasNormalTexture rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/textures/Remy_Body_Normal.png</cg_entities:hasNormalTexture>
     </owl:Class>
     
 

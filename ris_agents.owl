@@ -166,7 +166,7 @@
     <owl:NamedIndividual rdf:about="ris_agents#zedx">
         <rdf:type rdf:resource="cg_sensors#Sensor"/>
         <cg_sensors:hasFieldOfView rdf:resource="ris_agents#zedx_fov"/>
-        <cg_sensors:hasFrameId rdf:resource="ris_agents#zedx_left_camera_optical_frame"/>
+        <cg_sensors:hasFrameId rdf:resource="ris_agents#head_plate_frame"/>
         <cg_sensors:isStatic rdf:datatype="http://www.w3.org/2002/07/owl#bool">false</cg_sensors:isStatic>
     </owl:NamedIndividual>
 

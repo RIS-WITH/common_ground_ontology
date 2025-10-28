@@ -16,6 +16,7 @@
     <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/Cg_restaurant">
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
       <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_context"/>
     </owl:Ontology>
 
 
@@ -26,6 +27,13 @@
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
+
+
+    <!-- cg_restaurant#Restaurant -->
+    <owl:Class rdf:about="cg_restaurant#Restaurant">
+        <rdfs:subClassOf rdf:resource="cg_area#Area"/>
+    </owl:Class>
+
 
 
     <!-- cg_restaurant#Kitchen -->
@@ -77,28 +85,28 @@
     </owl:Class>
 
 
-    <!-- cg_restaurant#Waiter -->
+    <!-- cg_restaurant#WaiterRole -->
 
     <owl:Class rdf:about="cg_restaurant#Waiter">
         <rdfs:subClassOf rdf:resource="cg_context#Role"/>
     </owl:Class>
 
 
-    <!-- cg_restaurant#Cook -->
+    <!-- cg_restaurant#CookRole -->
 
     <owl:Class rdf:about="cg_restaurant#Cook">
         <rdfs:subClassOf rdf:resource="cg_context#Role"/>
     </owl:Class>
 
 
-    <!-- cg_restaurant#Chef -->
+    <!-- cg_restaurant#ChefRole -->
 
     <owl:Class rdf:about="cg_restaurant#Chef">
         <rdfs:subClassOf rdf:resource="cg_context#Role"/>
     </owl:Class>
 
 
-    <!-- cg_restaurant#Client -->
+    <!-- cg_restaurant#ClientRole -->
 
     <owl:Class rdf:about="cg_restaurant#Client">
         <rdfs:subClassOf rdf:resource="cg_context#Role"/>

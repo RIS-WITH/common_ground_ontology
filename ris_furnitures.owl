@@ -1,0 +1,176 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_furnitures#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_furnitures#"
+     xmlns:ris_furnitures="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_furnitures#"
+     xmlns:cg_furnitures="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/ris_furnitures">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <!-- ris_furnitures#console_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#console_1">
+        <rdf:type rdf:resource="cg_furnitures#ConsoleTable"/>
+        <common_ground:hasArId rdf:datatype="http://www.w3.org/2002/07/owl#real">54</common_ground:hasArId>
+        <cg_entities:hasColor rdf:resource="cg_entities#brown"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#kallax_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#kallax_1">
+        <rdf:type rdf:resource="cg_furnitures#KallaxTable"/>
+        <common_ground:hasArId rdf:datatype="http://www.w3.org/2002/07/owl#real">71</common_ground:hasArId>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#kallax_2 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#kallax_2">
+        <rdf:type rdf:resource="cg_furnitures#KallaxTable"/>
+        <common_ground:hasArId rdf:datatype="http://www.w3.org/2002/07/owl#real">80</common_ground:hasArId>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#kallax_3 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#kallax_3">
+        <rdf:type rdf:resource="cg_furnitures#KallaxTable"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#brown"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#round_table_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#round_table_1">
+        <rdf:type rdf:resource="cg_furnitures#RoundTable"/>
+        <common_ground:hasArId rdf:datatype="http://www.w3.org/2002/07/owl#real">78</common_ground:hasArId>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#desk_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#desk_1">
+        <rdf:type rdf:resource="cg_furnitures#Desk"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#brown"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#low_table_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#low_table_1">
+        <rdf:type rdf:resource="cg_furnitures#LowTable"/>
+        <common_ground:hasArId rdf:datatype="http://www.w3.org/2002/07/owl#real">72</common_ground:hasArId>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#ikea_table_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#ikea_table_1">
+        <rdf:type rdf:resource="cg_furnitures#Table"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#sofa_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#sofa_1">
+        <rdf:type rdf:resource="cg_furnitures#Sofa"/>
+    </owl:NamedIndividual>
+     
+
+    <!-- ris_furnitures#chair_1 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_1">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#chair_2 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_2">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#chair_3 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_3">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#chair_4 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_4">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#chair_5 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_5">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+    <!-- ris_furnitures#chair_6 -->
+
+    <owl:NamedIndividual rdf:about="ris_furnitures#chair_6">
+        <rdf:type rdf:resource="cg_furnitures#Chair"/>
+        <cg_entities:hasColor rdf:resource="cg_entities#black"/>
+    </owl:NamedIndividual>
+
+
+</rdf:RDF>

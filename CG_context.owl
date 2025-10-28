@@ -482,6 +482,7 @@
 
     <owl:ObjectProperty rdf:about="common_ground#hasRole">
         <rdfs:subPropertyOf rdf:resource="cg_entities#hasConceptualQuality"/>
+        <rdfs:domain rdf:resource="cg_agents#Agent"/>
     </owl:ObjectProperty>
     
 

@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures#"
+     xml:base="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures#"
+     xmlns:cg_furnitures="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures#"
+     xmlns:cg_objects="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects#"
+     xmlns:cg_entities="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities#"
+     xmlns:cg_language="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language#"
+     xmlns:onto="ontologenius"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_furnitures">
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_entities"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_language"/>
+      <owl:imports rdf:resource="https://github.com/RIS-WITH/common_ground_ontology/blob/master/CG_objects"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+
+
+    <!-- cg_furnitures#ConsoleTable -->
+
+    <owl:Class rdf:about="cg_furnitures#ConsoleTable">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="fr">console</rdfs:label>
+        <rdfs:label xml:lang="en">console table</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_console.obj</cg_entities:hasMesh>
+    </owl:Class>
+
+
+    <!-- cg_furnitures#Desk -->
+
+    <owl:Class rdf:about="cg_furnitures#Desk">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">desk</rdfs:label>
+        <rdfs:label xml:lang="fr">bureau</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/office_desk.obj</cg_entities:hasMesh>
+    </owl:Class>
+
+
+    <!-- cg_furnitures#Drawer -->
+
+    <owl:Class rdf:about="cg_furnitures#Drawer">
+        <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">drawer</rdfs:label>
+        <rdfs:label xml:lang="fr">tiroir</rdfs:label>
+    </owl:Class>
+
+
+    <!-- cg_furnitures#Furniture -->
+
+    <owl:Class rdf:about="cg_furnitures#Furniture">
+        <rdfs:subClassOf rdf:resource="cg_objects#Object"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">furniture</rdfs:label>
+        <rdfs:label xml:lang="fr">meuble</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_furnitures#KallaxTable -->
+
+    <owl:Class rdf:about="cg_furnitures#KallaxTable">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Table"/>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_kallax.stl</cg_entities:hasMesh>
+    </owl:Class>
+    
+
+
+    <!-- cg_furnitures#LowTable -->
+
+    <owl:Class rdf:about="cg_furnitures#LowTable">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Table"/>
+        <rdfs:label xml:lang="en">low table</rdfs:label>
+        <rdfs:label xml:lang="fr">low table</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_low_table_lack.stl</cg_entities:hasMesh>
+    </owl:Class>
+        
+
+
+    <!-- cg_furnitures#RoundTable -->
+
+    <owl:Class rdf:about="cg_furnitures#RoundTable">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Table"/>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/round_table.stl</cg_entities:hasMesh>
+    </owl:Class>
+    
+
+
+    <!-- cg_furnitures#Shelf -->
+
+    <owl:Class rdf:about="cg_furnitures#Shelf">
+        <rdfs:subClassOf rdf:resource="cg_objects#Container"/>
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="fr">etagere</rdfs:label>
+        <rdfs:label xml:lang="en">shelf</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_furnitures#StorageBox -->
+
+    <owl:Class rdf:about="cg_furnitures#StorageBox">
+        <rdfs:subClassOf rdf:resource="cg_objects#Box"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="fr">boite de rangement</rdfs:label>
+        <rdfs:label xml:lang="en">storage box</rdfs:label>
+    </owl:Class>
+    
+
+    <!-- cg_furnitures#TV -->
+
+    <owl:Class rdf:about="cg_furnitures#TV">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="fr">tele</rdfs:label>
+        <rdfs:label xml:lang="en">tv</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- cg_furnitures#Table -->
+
+    <owl:Class rdf:about="cg_furnitures#Table">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">table</rdfs:label>
+        <rdfs:label xml:lang="fr">table</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_table.dae</cg_entities:hasMesh>
+    </owl:Class>
+
+
+    <!-- cg_furnitures#Chair -->
+
+    <owl:Class rdf:about="cg_furnitures#Chair">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrFemaleGender"/>
+        <rdfs:label xml:lang="en">chair</rdfs:label>
+        <rdfs:label xml:lang="fr">chaise</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_chair_stephan.obj</cg_entities:hasMesh>
+    </owl:Class>
+
+
+    <!-- cg_furnitures#Sofa -->
+
+    <owl:Class rdf:about="cg_furnitures#Sofa">
+        <rdfs:subClassOf rdf:resource="cg_furnitures#Furniture"/>
+        <rdfs:subClassOf rdf:resource="cg_objects#Support"/>
+        <rdfs:subClassOf rdf:resource="cg_language#FrMaleGender"/>
+        <rdfs:label xml:lang="en">sofa</rdfs:label>
+        <rdfs:label xml:lang="fr">canape</rdfs:label>
+        <cg_entities:hasMesh rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package://common_ground_ontology/meshes/furnitures/ikea_sofa.obj</cg_entities:hasMesh>
+    </owl:Class>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_objects#Box"/>
+            <rdf:Description rdf:about="cg_furnitures#Drawer"/>
+            <rdf:Description rdf:about="cg_objects#Mug"/>
+            <rdf:Description rdf:about="cg_furnitures#Shelf"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_furnitures#ConsoleTable"/>
+            <rdf:Description rdf:about="cg_objects#Cube"/>
+            <rdf:Description rdf:about="cg_furnitures#Drawer"/>
+            <rdf:Description rdf:about="cg_furnitures#Table"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_furnitures#ConsoleTable"/>
+            <rdf:Description rdf:about="cg_furnitures#Drawer"/>
+            <rdf:Description rdf:about="cg_objects#Fan"/>
+            <rdf:Description rdf:about="cg_furnitures#Shelf"/>
+            <rdf:Description rdf:about="cg_furnitures#TV"/>
+            <rdf:Description rdf:about="cg_furnitures#Table"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="cg_furnitures#KallaxTable"/>
+            <rdf:Description rdf:about="cg_furnitures#LowTable"/>
+            <rdf:Description rdf:about="cg_furnitures#RoundTable"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>

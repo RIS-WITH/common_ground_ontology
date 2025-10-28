@@ -32,5 +32,7 @@ install(FILES
   ris_agents.owl
   CG_restaurant.owl
   CG_dishes.owl
+  CG_furnitures.owl
+  ris_furnitures.owl
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
